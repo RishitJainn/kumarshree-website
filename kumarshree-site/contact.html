@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9NYEWJSSW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S9NYEWJSSW');
+  </script>
+  
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact M.S. Kumar Electricals Pvt. Ltd. and Kumar Shree Electricals. Two offices in Delhi — Ajmeri Gate and Okhla Industrial Area. Specialists in Project Supply of LED Luminaries since 1985." />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Contact Us | kumarshree.com — Two Locations. One Team." />
+  <meta property="og:description" content="Ajmeri Gate, Old Delhi & Okhla Industrial Area, South Delhi. For project quotations, GeM orders, government procurement, and wholesale supply." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kumarshree.com/contact.html" />
+
+  <title>Contact Us | kumarshree.com — Two Locations. One Team.</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+  <style>
+    /* ── Page-specific styles ─────────────────────────────────── */
+
+    /* Office cards grid */
+    .offices-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+    @media (min-width: 768px) {
+      .offices-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+    }
+
+    .office-card {
+      background: var(--bg-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--dur-base) var(--ease-out),
+                  transform var(--dur-base) var(--ease-out);
+    }
+    .office-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-3px);
+    }
+
+    /* Card header band */
+    .office-card__header {
+      padding: var(--space-7) var(--space-8) var(--space-6);
+      position: relative;
+      overflow: hidden;
+    }
+    .office-card--mskepl .office-card__header { background: var(--navy); }
+    .office-card--kse    .office-card__header { background: var(--orange); }
+
+    .office-card__header::after {
+      content: '';
+      position: absolute;
+      right: -50px; top: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      pointer-events: none;
+    }
+    .office-card__header::before {
+      content: '';
+      position: absolute;
+      right: 20px; bottom: -30px;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
+
+    .office-card__eyebrow {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.52);
+      margin-bottom: var(--space-2);
+      position: relative;
+      z-index: 1;
+    }
+    .office-card__name {
+      font-family: var(--font-heading);
+      font-size: clamp(var(--text-lg), 2.4vw, var(--text-2xl));
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: var(--space-3);
+      position: relative;
+      z-index: 1;
+    }
+    .office-card__sub {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.60);
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+
+    /* Card body */
+    .office-card__body {
+      padding: var(--space-7) var(--space-8) var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+      flex: 1;
+    }
+
+    .office-row {
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      padding-block: var(--space-3);
+      border-bottom: 1px solid var(--navy-border);
+    }
+    .office-row:last-of-type { border-bottom: none; }
+
+    .office-row__icon {
+      width: 34px; height: 34px;
+      border-radius: var(--radius);
+      background: var(--navy-muted);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .office-card--kse .office-row__icon { background: var(--orange-muted); }
+    .office-row__icon svg {
+      width: 16px; height: 16px;
+    }
+    .office-card--mskepl .office-row__icon svg { fill: var(--navy); }
+    .office-card--kse    .office-row__icon svg { fill: var(--orange); }
+
+    .office-row__content {}
+    .office-row__label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-1);
+    }
+    .office-card--mskepl .office-row__label { color: var(--navy); }
+    .office-card--kse    .office-row__label { color: var(--orange); }
+
+    .office-row__value {
+      font-size: var(--text-sm);
+      color: var(--text-dark);
+      line-height: 1.65;
+    }
+    .office-row__value a {
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color var(--dur-fast);
+    }
+    .office-row__value a:hover { color: var(--navy); }
+    .office-card--kse .office-row__value a:hover { color: var(--orange); }
+
+    .office-row__value--mono {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    /* Card footer — note + ctas */
+    .office-card__note {
+      margin: var(--space-5) var(--space-8);
+      padding: var(--space-4) var(--space-5);
+      border-radius: var(--radius);
+      font-size: var(--text-sm);
+      line-height: 1.65;
+      font-style: italic;
+    }
+    .office-card--mskepl .office-card__note {
+      background: var(--navy-muted);
+      color: var(--navy);
+      border-left: 3px solid var(--navy);
+    }
+    .office-card--kse .office-card__note {
+      background: var(--orange-muted);
+      color: var(--orange-dark);
+      border-left: 3px solid var(--orange);
+    }
+
+    .office-card__ctas {
+      padding: 0 var(--space-8) var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    @media (min-width: 480px) {
+      .office-card__ctas { flex-direction: row; }
+    }
+
+    /* ── Contact form section ─────────────────────────────────── */
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+    @media (min-width: 960px) {
+      .contact-main-grid {
+        grid-template-columns: 1fr 420px;
+        gap: var(--space-16);
+        align-items: start;
+      }
+    }
+
+    .enquiry-form {
+      background: var(--bg-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-10) var(--space-8);
+      box-shadow: var(--shadow-md);
+    }
+    .enquiry-form__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: var(--space-2);
+    }
+    .enquiry-form__sub {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      margin-bottom: var(--space-8);
+      line-height: 1.65;
+    }
+
+    .form-stack { display: flex; flex-direction: column; gap: var(--space-5); }
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    @media (min-width: 480px) { .form-row-2 { grid-template-columns: 1fr 1fr; } }
+
+    .fgroup { display: flex; flex-direction: column; gap: var(--space-2); }
+    .flabel {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .flabel span { color: var(--orange); }
+    .finput,
+    .fselect,
+    .ftextarea {
+      padding: var(--space-3) var(--space-4);
+      background: var(--bg);
+      border: 1.5px solid var(--navy-border);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--text-dark);
+      outline: none;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color var(--dur-fast), box-shadow var(--dur-fast), background var(--dur-fast);
+    }
+    .finput:focus,
+    .fselect:focus,
+    .ftextarea:focus {
+      border-color: var(--navy);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(27,58,107,0.12);
+    }
+    .finput::placeholder, .ftextarea::placeholder { color: var(--text-light); }
+    .ftextarea { resize: vertical; min-height: 130px; }
+    .fselect {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%235A6472' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 20px;
+      padding-right: var(--space-10);
+    }
+
+    .form-submit-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    .form-note {
+      font-size: var(--text-xs);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .form-note a { color: var(--navy); text-decoration: underline; }
+
+    /* ── Aside — quick contact panel ─────────────────────────── */
+    .quick-contact-panel {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .qc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+    }
+    .qc-card__head {
+      padding: var(--space-4) var(--space-6);
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .qc-card__head svg {
+      width: 18px; height: 18px;
+      fill: var(--orange);
+      flex-shrink: 0;
+    }
+    .qc-card__head-title {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .qc-card__body {
+      padding: var(--space-5) var(--space-6) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .qc-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .qc-row__icon {
+      width: 32px; height: 32px;
+      border-radius: var(--radius-sm);
+      background: var(--navy-muted);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .qc-row__icon svg { width: 15px; height: 15px; fill: var(--navy); }
+    .qc-row__text {}
+    .qc-row__label {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .qc-row__value {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .qc-row__value a {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color var(--dur-fast);
+    }
+    .qc-row__value a:hover { color: var(--orange); }
+
+    /* Hours badge */
+    .hours-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: rgba(34,197,94,0.10);
+      border: 1px solid rgba(34,197,94,0.30);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: #15803d;
+    }
+    .hours-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+    }
+
+    /* Map placeholder */
+    .map-placeholder {
+      background: var(--bg-warm);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      position: relative;
+    }
+    .map-placeholder__inner {
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-4);
+      background:
+        linear-gradient(135deg, rgba(27,58,107,0.05) 0%, rgba(212,115,26,0.05) 100%);
+      padding: var(--space-8);
+      text-align: center;
+    }
+    .map-placeholder svg {
+      width: 48px; height: 48px;
+      fill: var(--navy);
+      opacity: 0.25;
+    }
+    .map-placeholder__text {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 28ch;
+    }
+    .map-placeholder__pins {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      justify-content: center;
+      margin-top: var(--space-2);
+    }
+    .map-pin-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+      font-weight: 600;
+    }
+    .map-pin-chip--navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .map-pin-chip--orange {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .map-pin-chip svg {
+      width: 11px; height: 11px;
+      fill: currentColor;
+    }
+
+    /* Response promise strip */
+    .response-strip {
+      background: var(--navy-deeper);
+      padding-block: clamp(var(--space-8), 4vw, var(--space-12));
+      position: relative;
+      overflow: hidden;
+    }
+    .response-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 100% at 80% 50%, rgba(212,115,26,0.12), transparent 55%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 0, transparent 80px);
+      pointer-events: none;
+    }
+    .response-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 640px)  { .response-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .response-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .response-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-5) var(--space-5);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-card);
+      transition: background var(--dur-base);
+    }
+    .response-item:hover { background: rgba(255,255,255,0.07); }
+    .response-item__icon {
+      width: 42px; height: 42px;
+      background: rgba(212,115,26,0.18);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .response-item__icon svg { width: 20px; height: 20px; fill: var(--orange); }
+    .response-item__text {}
+    .response-item__num {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .response-item__num span { color: var(--orange); }
+    .response-item__label {
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.50);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+
+          <a href="index.html" class="nav__logo" aria-label="kumarshree.com — Home">
+            <div class="nav__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+            </div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">kumarshree.com</span>
+              <span class="nav__logo-tagline">LED Project Specialists &middot; Since 1985</span>
+            </div>
+          </a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"      class="nav__link">Home</a></li>
+            <li><a href="about.html"      class="nav__link">About</a></li>
+            <li><a href="products.html"   class="nav__link">Products</a></li>
+            <li><a href="projects.html"   class="nav__link">Projects</a></li>
+            <li><a href="services.html"   class="nav__link">Services</a></li>
+            <li><a href="gem-govt.html"   class="nav__link">GeM &amp; Govt</a></li>
+            <li><a href="catalogues.html" class="nav__link">Catalogues</a></li>
+            <li><a href="contact.html"    class="nav__link nav__link--active" aria-current="page">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <a href="https://wa.me/919811078844"
+               class="btn-whatsapp hide-mobile"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp Us">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              WhatsApp Us
+            </a>
+            <button class="nav__hamburger" id="nav-toggle"
+                    aria-controls="nav-mobile" aria-expanded="false"
+                    aria-label="Open navigation menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
+      <div class="nav__mobile-backdrop" id="nav-backdrop"></div>
+      <nav class="nav__mobile-panel" aria-label="Mobile navigation">
+        <a href="index.html"      class="nav__mobile-link">Home</a>
+        <a href="about.html"      class="nav__mobile-link">About Us</a>
+        <a href="products.html"   class="nav__mobile-link">Products</a>
+        <a href="projects.html"   class="nav__mobile-link">Projects</a>
+        <a href="services.html"   class="nav__mobile-link">Services</a>
+        <a href="gem-govt.html"   class="nav__mobile-link">GeM &amp; Govt Supply</a>
+        <a href="catalogues.html" class="nav__mobile-link">Catalogues</a>
+        <a href="contact.html"    class="nav__mobile-link nav__mobile-link--active" aria-current="page">Contact</a>
+        <div class="nav__mobile-divider" role="separator"></div>
+        <a href="https://wa.me/919811078844"
+           class="btn-whatsapp nav__mobile-cta"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp Us">
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          WhatsApp Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MAIN                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─────────────────────────────────────────────────────────
+         1. PAGE HERO
+    ───────────────────────────────────────────────────────────── -->
+    <section class="page-hero" aria-label="Contact Us page header">
+      <div class="container">
+        <div class="page-hero__inner">
+
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="breadcrumb__item">
+              <a href="index.html" class="breadcrumb__link">Home</a>
+              <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            </div>
+            <div class="breadcrumb__item">
+              <span class="breadcrumb__current" aria-current="page">Contact Us</span>
+            </div>
+          </nav>
+
+          <span class="eyebrow" style="color:rgba(255,255,255,0.55);">Get in Touch</span>
+
+          <h1 class="page-hero__heading">
+            Two Locations.<br>One Team.
+          </h1>
+
+          <p class="page-hero__sub">
+            Specialists in Project Supply of LED Luminaries. Reach us at either of our
+            Delhi offices — or submit your requirement and we will respond within 24 hours.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         2. RESPONSE PROMISE STRIP
+    ───────────────────────────────────────────────────────────── -->
+    <div class="response-strip" aria-label="Response commitments">
+      <div class="container">
+        <dl class="response-grid">
+          <div class="response-item reveal">
+            <div class="response-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            </div>
+            <div class="response-item__text">
+              <dt class="response-item__num">24<span>hr</span></dt>
+              <dd class="response-item__label">Response to project enquiries</dd>
+            </div>
+          </div>
+          <div class="response-item reveal reveal--delay-1">
+            <div class="response-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+            </div>
+            <div class="response-item__text">
+              <dt class="response-item__num">Mon<span>–</span>Sat</dt>
+              <dd class="response-item__label">10:00 AM – 7:00 PM at both offices</dd>
+            </div>
+          </div>
+          <div class="response-item reveal reveal--delay-2">
+            <div class="response-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="response-item__text">
+              <dt class="response-item__num">2</dt>
+              <dd class="response-item__label">Delhi offices — Ajmeri Gate &amp; Okhla</dd>
+            </div>
+          </div>
+          <div class="response-item reveal reveal--delay-3">
+            <div class="response-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+            </div>
+            <div class="response-item__text">
+              <dt class="response-item__num">Pan<span>&#8209;India</span></dt>
+              <dd class="response-item__label">Supply to any project site nationwide</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         3. OFFICE CARDS
+    ───────────────────────────────────────────────────────────── -->
+    <section class="section" aria-labelledby="offices-heading">
+      <div class="container">
+
+        <div class="section-intro section-intro--center">
+          <span class="eyebrow">Our Offices</span>
+          <h2 class="section-heading" id="offices-heading">
+            Two offices. One team. Same philosophy.
+          </h2>
+          <hr class="rule" />
+          <p class="section-subheading">
+            Each office serves its own market area. Both carry authorised OEM stock
+            and provide the same level of project-specialist expertise.
+          </p>
+        </div>
+
+        <div class="offices-grid">
+
+          <!-- MSKEPL Office -->
+          <article class="office-card office-card--mskepl reveal" aria-labelledby="mskepl-office-name">
+            <div class="office-card__header">
+              <p class="office-card__eyebrow">Entity 1 &middot; Flagship Office &middot; GeM Registered</p>
+              <h2 class="office-card__name" id="mskepl-office-name">
+                M.S. Kumar Electricals<br>Private Limited
+              </h2>
+              <p class="office-card__sub">Ajmeri Gate, Old Delhi</p>
+            </div>
+
+            <div class="office-card__body">
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Address</p>
+                  <address class="office-row__value" style="font-style:normal;">
+                    1311/8, Fasil Road, Behind PNB,<br>
+                    Asaf Ali Road, Ajmeri Gate,<br>
+                    New Delhi — 110006
+                  </address>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Telephone</p>
+                  <p class="office-row__value">
+                    <a href="tel:01143023232">011-43023232</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Mobile</p>
+                  <p class="office-row__value">
+                    <a href="tel:+919811078844">+91-9811078844</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Email</p>
+                  <p class="office-row__value">
+                    <a href="mailto:sandeep.kumarelec@gmail.com">sandeep.kumarelec@gmail.com</a><br>
+                    <a href="mailto:electricalsmskumar@gmail.com">electricalsmskumar@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Office Hours</p>
+                  <p class="office-row__value">Monday – Saturday &middot; 10:00 AM – 7:00 PM</p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-9 8H5v-2h6v2zm8 0h-2v-2h2v2zm0-4H5v-2h14v2zM16 3H8L6 7h12l-2-4z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">GST &amp; GeM</p>
+                  <p class="office-row__value">
+                    <span class="office-row__value--mono">GST: 07AABCM0298G1ZJ</span><br>
+                    <span class="office-row__value--mono">GeM: 049D180000460368</span>
+                  </p>
+                </div>
+              </div>
+
+            </div><!-- /office-card__body -->
+
+            <div class="office-card__note" role="note">
+              For project quotations, government procurement, GeM orders, and technical
+              specification queries — this is your primary contact.
+            </div>
+
+            <div class="office-card__ctas">
+              <a href="tel:+919811078844" class="btn btn--secondary btn--lg" style="flex:1;justify-content:center;">
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Now
+              </a>
+              <a href="https://wa.me/919811078844" target="_blank" rel="noopener noreferrer"
+                 class="btn btn--primary btn--lg" style="flex:1;justify-content:center;">
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+
+          </article>
+
+
+          <!-- KSE Office -->
+          <article class="office-card office-card--kse reveal reveal--delay-1" aria-labelledby="kse-office-name">
+            <div class="office-card__header">
+              <p class="office-card__eyebrow">Entity 2 &middot; South Delhi Office &middot; Est. 2023</p>
+              <h2 class="office-card__name" id="kse-office-name">
+                Kumar Shree<br>Electricals
+              </h2>
+              <p class="office-card__sub">Okhla Industrial Area, South Delhi</p>
+            </div>
+
+            <div class="office-card__body">
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Address</p>
+                  <address class="office-row__value" style="font-style:normal;">
+                    Ground Floor, A-9, DDA Shed,<br>
+                    Okhla Industrial Area Phase-1,<br>
+                    New Delhi — 110020
+                  </address>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Telephone</p>
+                  <p class="office-row__value">
+                    <a href="tel:01142448336">011-42448336</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Mobile</p>
+                  <p class="office-row__value">
+                    <a href="tel:+919211771101">+91-9211771101</a>
+                    &nbsp;&middot;&nbsp;
+                    <a href="tel:+918527272652">+91-8527272652</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Email</p>
+                  <p class="office-row__value">
+                    <a href="mailto:lighting@kumarshree.com">lighting@kumarshree.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">Office Hours</p>
+                  <p class="office-row__value">Monday – Saturday &middot; 10:00 AM – 7:00 PM</p>
+                </div>
+              </div>
+
+              <div class="office-row">
+                <div class="office-row__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm-9 8H5v-2h6v2zm8 0h-2v-2h2v2zm0-4H5v-2h14v2zM16 3H8L6 7h12l-2-4z"/></svg>
+                </div>
+                <div class="office-row__content">
+                  <p class="office-row__label">GST</p>
+                  <p class="office-row__value">
+                    <span class="office-row__value--mono">GST: 07ABAFK4763B1ZM</span>
+                  </p>
+                </div>
+              </div>
+
+            </div><!-- /office-card__body -->
+
+            <div class="office-card__note" role="note">
+              For wholesale supply, trade enquiries, and South Delhi / NCR project requirements.
+            </div>
+
+            <div class="office-card__ctas">
+              <a href="tel:+919211771101" class="btn btn--outline btn--lg" style="flex:1;justify-content:center;border-color:var(--orange);color:var(--orange);"
+                 onmouseover="this.style.background='var(--orange)';this.style.color='white';"
+                 onmouseout="this.style.background='transparent';this.style.color='var(--orange)';">
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Now
+              </a>
+              <a href="mailto:lighting@kumarshree.com"
+                 class="btn btn--primary btn--lg" style="flex:1;justify-content:center;">
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:currentColor;"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Send Email
+              </a>
+            </div>
+
+          </article>
+
+        </div><!-- /offices-grid -->
+
+      </div>
+    </section>
+
+    <form action="https://formspree.io/f/myklbqkn" method="POST">
+      <input type="text" name="name" placeholder="Your Name">
+      <input type="email" name="email" placeholder="Your Email">
+      <input type="tel" name="phone" placeholder="Your Phone">
+      <textarea name="message" placeholder="Your requirement"></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+
+    <form action="https://formspree.io/f/xojypodr" method="POST">
+      <input type="text" name="name" placeholder="Your Name">
+      <input type="email" name="email" placeholder="Your Email">
+      <input type="tel" name="phone" placeholder="Your Phone">
+      <textarea name="message" placeholder="Your requirement"></textarea>
+      <button type="submit">Send Enquiry</button>
+    </form>
+
+    <form id="enquiry-form" onsubmit="sendWhatsApp(event)">
+      <input  type="text"   id="name"        name="name"        placeholder="Your Name"         required />
+      <input  type="tel"    id="phone"       name="phone"       placeholder="Phone Number"       required />
+      <input  type="email"  id="email"       name="email"       placeholder="Email Address"      required />
+      <textarea             id="requirement" name="requirement" placeholder="Your Requirement"   required></textarea>
+      <input  type="number" id="quantity"    name="quantity"    placeholder="Quantity"           required />
+      <button type="submit">Send Enquiry on WhatsApp</button>
+    </form>
+
+    <!-- ─────────────────────────────────────────────────────────
+         4. MAP PLACEHOLDER
+    ───────────────────────────────────────────────────────────── -->
+    <section class="section section--tight" style="background:var(--bg-warm); padding-top:0;" aria-label="Office locations map">
+      <div class="container">
+        <div class="map-placeholder" role="region" aria-label="Map showing both office locations">
+          <div class="map-placeholder__inner">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <p class="map-placeholder__text">
+              Google Maps embed — add your iframe here.<br>
+              Two pins: Ajmeri Gate &amp; Okhla Industrial Area.
+            </p>
+            <div class="map-placeholder__pins" aria-label="Office location pins">
+              <span class="map-pin-chip map-pin-chip--navy">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Ajmeri Gate — 110006
+              </span>
+              <span class="map-pin-chip map-pin-chip--orange">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Okhla Phase-1 — 110020
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         5. GENERAL ENQUIRY FORM + QUICK CONTACT PANEL
+    ───────────────────────────────────────────────────────────── -->
+    <section class="section" id="enquiry-form" style="background:var(--bg-warm);" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="contact-main-grid">
+
+          <!-- Enquiry Form -->
+          <div class="enquiry-form reveal">
+            <h2 class="enquiry-form__title" id="form-heading">Send Us Your Requirement</h2>
+            <p class="enquiry-form__sub">
+              Describe your project or requirement below. Our team responds within
+              <strong>24 hours</strong> — often same day for government and urgent requirements.
+            </p>
+
+            <form action="#" method="post" novalidate class="form-stack">
+
+              <div class="form-row-2">
+                <div class="fgroup">
+                  <label class="flabel" for="eq-name">Full Name <span aria-hidden="true">*</span></label>
+                  <input class="finput" type="text" id="eq-name" name="name"
+                         placeholder="Your full name" required autocomplete="name" />
+                </div>
+                <div class="fgroup">
+                  <label class="flabel" for="eq-company">Company / Organisation</label>
+                  <input class="finput" type="text" id="eq-company" name="company"
+                         placeholder="Company or department name" autocomplete="organization" />
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="fgroup">
+                  <label class="flabel" for="eq-phone">Phone / Mobile <span aria-hidden="true">*</span></label>
+                  <input class="finput" type="tel" id="eq-phone" name="phone"
+                         placeholder="+91 XXXXX XXXXX" required autocomplete="tel" />
+                </div>
+                <div class="fgroup">
+                  <label class="flabel" for="eq-email">Email Address</label>
+                  <input class="finput" type="email" id="eq-email" name="email"
+                         placeholder="your@email.com" autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="fgroup">
+                <label class="flabel" for="eq-office">Which office are you contacting?</label>
+                <select class="fselect" id="eq-office" name="office">
+                  <option value="">Select an office (optional)</option>
+                  <option value="mskepl">M.S. Kumar Electricals Pvt. Ltd. — Ajmeri Gate (Project Supply / GeM / Govt.)</option>
+                  <option value="kse">Kumar Shree Electricals — Okhla (Wholesale / Trade / NCR Supply)</option>
+                  <option value="either">Not sure — please route to the right team</option>
+                </select>
+              </div>
+
+              <div class="fgroup">
+                <label class="flabel" for="eq-message">
+                  Requirement / Message <span aria-hidden="true">*</span>
+                </label>
+                <textarea class="ftextarea" id="eq-message" name="message" required
+                          placeholder="Describe your project requirement, product needed, quantity, timeline, or any other details…"></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn--secondary btn--lg" style="align-self:flex-start;">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                  </svg>
+                  Submit Enquiry
+                </button>
+                <p class="form-note">
+                  * Required fields. By submitting this form you agree to our
+                  <a href="privacy-policy.html">Privacy Policy</a>.
+                  We do not share your details with third parties.
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Quick contact sidebar -->
+          <aside class="quick-contact-panel reveal reveal--delay-1" aria-label="Quick contact details">
+
+            <!-- MSKEPL quick card -->
+            <div class="qc-card">
+              <div class="qc-card__head">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L2 8v2h20V8L12 3zm-7 7v8H3v2h18v-2h-2v-8h-2v8h-2v-8h-2v8h-2v-8H9v8H7v-8H5z"/></svg>
+                <span class="qc-card__head-title">M.S. Kumar Electricals Pvt. Ltd.</span>
+              </div>
+              <div class="qc-card__body">
+                <div class="qc-row">
+                  <div class="qc-row__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                  <div class="qc-row__text">
+                    <span class="qc-row__label">Telephone</span>
+                    <span class="qc-row__value"><a href="tel:01143023232">011-43023232</a></span>
+                  </div>
+                </div>
+                <div class="qc-row">
+                  <div class="qc-row__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                  <div class="qc-row__text">
+                    <span class="qc-row__label">Mobile</span>
+                    <span class="qc-row__value"><a href="tel:+919811078844">+91-9811078844</a></span>
+                  </div>
+                </div>
+                <div class="qc-row">
+                  <div class="qc-row__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  </div>
+                  <div class="qc-row__text">
+                    <span class="qc-row__label">Email</span>
+                    <span class="qc-row__value"><a href="mailto:sandeep.kumarelec@gmail.com">sandeep.kumarelec@gmail.com</a></span>
+                  </div>
+                </div>
+                <div>
+                  <span class="hours-badge" role="status" aria-label="Office open Monday to Saturday 10am to 7pm">
+                    Mon – Sat &nbsp;&middot;&nbsp; 10:00 AM – 7:00 PM
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- KSE quick card -->
+            <div class="qc-card">
+              <div class="qc-card__head" style="background:var(--orange);">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L2 8v2h20V8L12 3zm-7 7v8H3v2h18v-2h-2v-8h-2v8h-2v-8h-2v8h-2v-8H9v8H7v-8H5z"/></svg>
+                <span class="qc-card__head-title">Kumar Shree Electricals</span>
+              </div>
+              <div class="qc-card__body">
+                <div class="qc-row">
+                  <div class="qc-row__icon" style="background:var(--orange-muted);" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" style="fill:var(--orange);"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                  <div class="qc-row__text">
+                    <span class="qc-row__label">Telephone</span>
+                    <span class="qc-row__value"><a href="tel:01142448336">011-42448336</a></span>
+                  </div>
+                </div>
+                <div class="qc-row">
+                  <div class="qc-row__icon" style="background:var(--orange-muted);" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" style="fill:var(--orange);"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                  <div class="qc-row__text">
+                    <span class="qc-row__label">Mobile</span>
+                    <span class="qc-row__value">
+                      <a href="tel:+919211771101">+91-9211771101</a><br>
+                      <a href="tel:+918527272652">+91-8527272652</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="qc-row">
+                  <div class="qc-row__icon" style="background:var(--orange-muted);" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" style="fill:var(--orange);"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  </div>
+                  <div class="qc-row__text">
+                    <span class="qc-row__label">Email</span>
+                    <span class="qc-row__value"><a href="mailto:lighting@kumarshree.com">lighting@kumarshree.com</a></span>
+                  </div>
+                </div>
+                <div>
+                  <span class="hours-badge" role="status">
+                    Mon – Sat &nbsp;&middot;&nbsp; 10:00 AM – 7:00 PM
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GeM reference chip -->
+            <div style="background:var(--bg-card);border:1px solid var(--navy-border);border-radius:var(--radius-card);padding:var(--space-5) var(--space-6);">
+              <p style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.10em;text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-2);">GeM Seller ID</p>
+              <p style="font-family:'Courier New',Courier,monospace;font-size:var(--text-base);font-weight:700;color:var(--navy);letter-spacing:0.05em;">049D180000460368</p>
+              <p style="font-size:var(--text-xs);color:var(--text-muted);margin-top:var(--space-2);">M.S. Kumar Electricals Pvt. Ltd. — Active GeM Seller</p>
+              <a href="gem-govt.html" style="display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);font-weight:600;color:var(--navy);margin-top:var(--space-4);text-decoration:none;" aria-label="View GeM and Government Supply page">
+                GeM &amp; Government Supply
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         6. CTA BAND
+    ───────────────────────────────────────────────────────────── -->
+    <section class="cta-band" aria-labelledby="contact-cta-heading">
+      <div class="container">
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="cta-band__heading" id="contact-cta-heading">
+              Prefer to talk directly?
+            </h2>
+            <p class="cta-band__sub">
+              Call or WhatsApp our project desk. We respond same-day for government
+              and urgent project requirements.
+            </p>
+          </div>
+          <div class="cta-band__actions">
+            <a href="https://wa.me/919811078844" target="_blank" rel="noopener noreferrer"
+               class="btn btn--white btn--lg">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              WhatsApp Us Now
+            </a>
+            <a href="tel:+919811078844" class="btn btn--ghost btn--lg">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              Call +91-9811078844
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__main">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="kumarshree.com — Home">
+            <div class="footer__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="footer__logo-name">kumarshree.com</div>
+              <div class="footer__logo-sub">LED Project Specialists</div>
+            </div>
+          </a>
+          <p class="footer__about">
+            Specialists in Project Supplies of LED Luminaries. Authorised distributors
+            for Bajaj, Philips, Havells, Crompton, Halonix &amp; Orient Electric —
+            serving India since 1985.
+          </p>
+          <div class="footer__badges">
+            <span class="footer__badge">GeM Seller</span>
+            <span class="footer__badge">BIS Certified</span>
+            <span class="footer__badge">OEM Authorised</span>
+          </div>
+        </div>
+
+        <nav aria-label="Footer quick links">
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__nav" role="list">
+            <li><a href="index.html"      class="footer__nav-link">Home</a></li>
+            <li><a href="about.html"      class="footer__nav-link">About Us</a></li>
+            <li><a href="products.html"   class="footer__nav-link">Products</a></li>
+            <li><a href="projects.html"   class="footer__nav-link">Projects</a></li>
+            <li><a href="services.html"   class="footer__nav-link">Services</a></li>
+            <li><a href="gem-govt.html"   class="footer__nav-link">GeM &amp; Govt Supply</a></li>
+            <li><a href="catalogues.html" class="footer__nav-link">Catalogues</a></li>
+            <li><a href="contact.html"    class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="footer__col-title">M.S. Kumar Electricals Pvt. Ltd.</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>1311/8, Fasil Road, Behind PNB,<br>Asaf Ali Road, Ajmeri Gate,<br>New Delhi — 110006</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>T: <a href="tel:01143023232">011-43023232</a><br>M: <a href="tel:+919811078844">+91-9811078844</a></span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>
+                <a href="mailto:sandeep.kumarelec@gmail.com">sandeep.kumarelec@gmail.com</a><br>
+                <a href="mailto:electricalsmskumar@gmail.com">electricalsmskumar@gmail.com</a>
+              </span>
+            </div>
+          </address>
+          <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:var(--space-3);line-height:1.7;">
+            GST: 07AABCM0298G1ZJ<br>GeM Seller ID: 049D180000460368
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Kumar Shree Electricals</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Ground Floor, A-9, DDA Shed,<br>Okhla Industrial Area Phase-1,<br>New Delhi — 110020</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>
+                T: <a href="tel:01142448336">011-42448336</a><br>
+                M: <a href="tel:+919211771101">+91-9211771101</a> &middot; <a href="tel:+918527272652">+91-8527272652</a>
+              </span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span><a href="mailto:lighting@kumarshree.com">lighting@kumarshree.com</a></span>
+            </div>
+          </address>
+          <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:var(--space-3);">
+            GST: 07ABAFK4763B1ZM
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2025 kumarshree.com &middot; Specialists in Project Supplies of LED Luminaries &middot; All Rights Reserved
+        </p>
+        <nav class="footer__legal-links" aria-label="Legal links">
+          <a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="contact.html"        class="footer__legal-link">Contact Us</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- WHATSAPP FAB                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/919811078844"
+     class="whatsapp-fab"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    <span class="whatsapp-fab__label">WhatsApp Us</span>
+  </a>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <script src="../js/main.js" defer></script>
+  <script>
+    /* ── Mobile nav ──────────────────────────────────────────── */
+    var navToggle   = document.getElementById('nav-toggle');
+    var navMobile   = document.getElementById('nav-mobile');
+    var navBackdrop = document.getElementById('nav-backdrop');
+    function openNav() {
+      navMobile.classList.add('is-open');
+      navMobile.setAttribute('aria-hidden', 'false');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      navMobile.classList.remove('is-open');
+      navMobile.setAttribute('aria-hidden', 'true');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    navToggle.addEventListener('click', function () {
+      navMobile.classList.contains('is-open') ? closeNav() : openNav();
+    });
+    navBackdrop.addEventListener('click', closeNav);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMobile.classList.contains('is-open')) {
+        closeNav(); navToggle.focus();
+      }
+    });
+
+    /* ── Nav scroll shadow ───────────────────────────────────── */
+    var siteNav = document.getElementById('site-nav');
+    window.addEventListener('scroll', function () {
+      siteNav.classList.toggle('nav--scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── Scroll reveal ───────────────────────────────────────── */
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+  </script>
+
+</body>
+</html>

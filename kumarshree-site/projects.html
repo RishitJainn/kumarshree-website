@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9NYEWJSSW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S9NYEWJSSW');
+  </script>
+  
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Our project portfolio spans national infrastructure, government institutions, defence establishments, and iconic civic landmarks — AIIMS Jammu, Delhi Metro, Signature Bridge, IGI Airport, NHAI, and more." />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Projects | kumarshree.com — Landmark LED Project Supply" />
+  <meta property="og:description" content="9 landmark projects. Government hospitals, metro stations, international airports, iconic bridges, defence establishments, and national expressways." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kumarshree.com/projects.html" />
+
+  <title>Projects | kumarshree.com — Landmark LED Project Supply Since 1985</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+  <style>
+    /* ── Page-specific styles ─────────────────────────────────── */
+
+    /* Category header row */
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+      padding-bottom: var(--space-5);
+      border-bottom: 2px solid var(--navy-border);
+    }
+    .cat-header__accent {
+      width: 5px;
+      border-radius: var(--radius-pill);
+      flex-shrink: 0;
+      align-self: stretch;
+      min-height: 44px;
+    }
+    .cat-header__accent--navy   { background: var(--navy); }
+    .cat-header__accent--orange { background: var(--orange); }
+    .cat-header__accent--gold   { background: #B8892A; }
+
+    .cat-header__text {}
+    .cat-header__label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-1);
+    }
+    .cat-header__label--navy   { color: var(--navy); }
+    .cat-header__label--orange { color: var(--orange); }
+    .cat-header__label--gold   { color: #9B6E1A; }
+
+    .cat-header__title {
+      font-family: var(--font-heading);
+      font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+    .cat-header__count {
+      margin-left: auto;
+      flex-shrink: 0;
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.07;
+      color: var(--navy);
+      user-select: none;
+    }
+
+    /* Category section spacing */
+    .cat-section {
+      padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+    }
+    .cat-section + .cat-section {
+      border-top: 1px solid var(--navy-border);
+    }
+    .cat-section--warm { background: var(--bg-warm); }
+
+    /* Project grid — 3-col on wide, 2-col mid, 1-col mobile */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    @media (min-width: 640px) {
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .project-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    /* 4-item grid: 2+2 on wide */
+    .project-grid--4 {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .project-grid--4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1200px) {
+      .project-grid--4 { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* Enhanced project card */
+    .pcard {
+      background: var(--bg-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--dur-base) var(--ease-out),
+                  box-shadow var(--dur-base) var(--ease-out),
+                  border-color var(--dur-base) var(--ease-out);
+      position: relative;
+    }
+    .pcard:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Top colour accent bar */
+    .pcard__bar {
+      height: 4px;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .pcard__bar--navy   { background: var(--navy); }
+    .pcard__bar--orange { background: var(--orange); }
+    .pcard__bar--gold   { background: #B8892A; }
+    .pcard__bar--red    { background: #9B2020; }
+
+    /* Image placeholder */
+    .pcard__img-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--bg-warm);
+    }
+    .pcard__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--dur-slow) var(--ease-out);
+    }
+    .pcard:hover .pcard__img-wrap img { transform: scale(1.05); }
+
+    .pcard__tag {
+      position: absolute;
+      top: var(--space-4);
+      left: var(--space-4);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+    .pcard__tag--navy   { background: var(--navy);    color: var(--white); }
+    .pcard__tag--orange { background: var(--orange);  color: var(--white); }
+    .pcard__tag--gold   { background: #B8892A;        color: var(--white); }
+    .pcard__tag--red    { background: #9B2020;        color: var(--white); }
+
+    /* Body */
+    .pcard__body {
+      padding: var(--space-6) var(--space-6) var(--space-7);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      flex: 1;
+    }
+    .pcard__client {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+    .pcard__client--navy   { color: var(--navy); }
+    .pcard__client--orange { color: var(--orange); }
+    .pcard__client--gold   { color: #9B6E1A; }
+    .pcard__client--red    { color: #9B2020; }
+
+    .pcard__name {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      transition: color var(--dur-fast) var(--ease-out);
+    }
+    .pcard:hover .pcard__name { color: var(--orange); }
+
+    .pcard__location {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .pcard__location svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .pcard__desc {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.72;
+      flex: 1;
+    }
+
+    /* Proof-point chips at bottom of card */
+    .pcard__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-2);
+    }
+    .pcard__chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: 3px 10px;
+      background: var(--navy-muted);
+      border-radius: var(--radius-pill);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.05em;
+    }
+    .pcard__chip--orange {
+      background: var(--orange-muted);
+      color: var(--orange-dark);
+    }
+    .pcard__chip--gold {
+      background: rgba(184,137,42,0.12);
+      color: #9B6E1A;
+    }
+    .pcard__chip svg {
+      width: 10px;
+      height: 10px;
+      fill: currentColor;
+    }
+
+    /* Stats summary bar at top */
+    .portfolio-summary {
+      background: var(--navy);
+      padding-block: clamp(var(--space-6), 4vw, var(--space-10));
+    }
+    .portfolio-summary__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      .portfolio-summary__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .psumm-item {
+      text-align: center;
+      padding: var(--space-5) var(--space-4);
+      border-radius: var(--radius-card);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .psumm-item__num {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .psumm-item__num span { color: var(--orange); font-style: italic; }
+    .psumm-item__label {
+      display: block;
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.55);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      margin-top: var(--space-2);
+      text-transform: uppercase;
+    }
+
+    /* Image placeholder graphic */
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg) 100%);
+    }
+    .img-placeholder svg {
+      width: 40px;
+      height: 40px;
+      opacity: 0.25;
+      fill: var(--navy);
+    }
+    .img-placeholder__label {
+      font-size: var(--text-xs);
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+
+          <a href="index.html" class="nav__logo" aria-label="kumarshree.com — Home">
+            <div class="nav__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+            </div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">kumarshree.com</span>
+              <span class="nav__logo-tagline">LED Project Specialists &middot; Since 1985</span>
+            </div>
+          </a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"      class="nav__link">Home</a></li>
+            <li><a href="about.html"      class="nav__link">About</a></li>
+            <li><a href="products.html"   class="nav__link">Products</a></li>
+            <li><a href="projects.html"   class="nav__link nav__link--active" aria-current="page">Projects</a></li>
+            <li><a href="services.html"   class="nav__link">Services</a></li>
+            <li><a href="gem-govt.html"   class="nav__link">GeM &amp; Govt</a></li>
+            <li><a href="catalogues.html" class="nav__link">Catalogues</a></li>
+            <li><a href="contact.html"    class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <a href="https://wa.me/919811078844"
+               class="btn-whatsapp hide-mobile"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp Us">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              WhatsApp Us
+            </a>
+            <button class="nav__hamburger" id="nav-toggle"
+                    aria-controls="nav-mobile" aria-expanded="false"
+                    aria-label="Open navigation menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
+      <div class="nav__mobile-backdrop" id="nav-backdrop"></div>
+      <nav class="nav__mobile-panel" aria-label="Mobile navigation">
+        <a href="index.html"      class="nav__mobile-link">Home</a>
+        <a href="about.html"      class="nav__mobile-link">About Us</a>
+        <a href="products.html"   class="nav__mobile-link">Products</a>
+        <a href="projects.html"   class="nav__mobile-link nav__mobile-link--active" aria-current="page">Projects</a>
+        <a href="services.html"   class="nav__mobile-link">Services</a>
+        <a href="gem-govt.html"   class="nav__mobile-link">GeM &amp; Govt Supply</a>
+        <a href="catalogues.html" class="nav__mobile-link">Catalogues</a>
+        <a href="contact.html"    class="nav__mobile-link">Contact</a>
+        <div class="nav__mobile-divider" role="separator"></div>
+        <a href="https://wa.me/919811078844"
+           class="btn-whatsapp nav__mobile-cta"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp Us">
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          WhatsApp Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MAIN                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─────────────────────────────────────────────────────────
+         1. PAGE HERO
+    ───────────────────────────────────────────────────────────── -->
+    <section class="page-hero" aria-label="Projects page header">
+      <div class="container">
+        <div class="page-hero__inner">
+
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="breadcrumb__item">
+              <a href="index.html" class="breadcrumb__link">Home</a>
+              <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            </div>
+            <div class="breadcrumb__item">
+              <span class="breadcrumb__current" aria-current="page">Projects</span>
+            </div>
+          </nav>
+
+          <span class="eyebrow" style="color:rgba(255,255,255,0.55);">Our Track Record</span>
+
+          <h1 class="page-hero__heading">
+            Landmark Projects.<br>Proven Supply.
+          </h1>
+
+          <p class="page-hero__sub">
+            Government institutions, national infrastructure, defence establishments,
+            and iconic civic landmarks — nine projects that define what project-specialist
+            supply actually means.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         2. PORTFOLIO SUMMARY STRIP
+    ───────────────────────────────────────────────────────────── -->
+    <div class="portfolio-summary" aria-label="Portfolio at a glance">
+      <div class="container">
+        <dl class="portfolio-summary__grid">
+          <div class="psumm-item reveal">
+            <dt class="sr-only">Total Projects</dt>
+            <dd class="psumm-item__num">9<span>+</span></dd>
+            <span class="psumm-item__label">Landmark Projects</span>
+          </div>
+          <div class="psumm-item reveal reveal--delay-1">
+            <dt class="sr-only">Categories</dt>
+            <dd class="psumm-item__num">3</dd>
+            <span class="psumm-item__label">Project Categories</span>
+          </div>
+          <div class="psumm-item reveal reveal--delay-2">
+            <dt class="sr-only">Supply Reach</dt>
+            <dd class="psumm-item__num"><span>Pan</span>&#8209;India</dd>
+            <span class="psumm-item__label">Supply Reach</span>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         3. INTRO PARAGRAPH
+    ───────────────────────────────────────────────────────────── -->
+    <section class="section section--tight" aria-labelledby="projects-intro-heading">
+      <div class="container">
+        <div style="max-width: 820px; margin-inline: auto; text-align: center;">
+          <span class="eyebrow" style="justify-content:center;">The Benchmark</span>
+          <h2 class="section-heading" id="projects-intro-heading" style="margin-inline:auto; text-align:center;">
+            Not reference clients. The benchmark.
+          </h2>
+          <hr class="rule" style="margin-inline:auto;" />
+          <p style="font-size:var(--text-md); color:var(--text-muted); line-height:1.8; margin-top:var(--space-2);">
+            Our project portfolio spans national infrastructure, government institutions,
+            defence establishments, and iconic civic landmarks. Every project on this page
+            was supplied through M.S. Kumar Electricals Pvt. Ltd. — the same team and OEM
+            relationships that power both entities. These are not reference clients. They
+            are the benchmark against which we measure everything we do.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         CATEGORY A — GOVERNMENT & INSTITUTIONAL
+    ───────────────────────────────────────────────────────────── -->
+    <section class="cat-section" id="govt-institutional" aria-labelledby="cat-a-heading">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-header__accent cat-header__accent--navy" aria-hidden="true"></div>
+          <div class="cat-header__text">
+            <p class="cat-header__label cat-header__label--navy">Category A</p>
+            <h2 class="cat-header__title" id="cat-a-heading">Government &amp; Institutional</h2>
+          </div>
+          <span class="cat-header__count" aria-hidden="true">3</span>
+        </div>
+
+        <ul class="project-grid" role="list">
+
+          <!-- A1: AIIMS Jammu -->
+          <li class="pcard reveal" id="aiims-jammu" aria-labelledby="aiims-name">
+            <div class="pcard__bar pcard__bar--navy" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/aiims-jammu.jpg"
+                alt="AIIMS Hospital, Jammu — All India Institute of Medical Sciences"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--navy">Government · Healthcare</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--navy">All India Institute of Medical Sciences</p>
+              <h3 class="pcard__name" id="aiims-name">AIIMS Hospital, Jammu</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Jammu, Jammu &amp; Kashmir
+              </p>
+              <p class="pcard__desc">
+                A critical healthcare infrastructure project requiring luminaires that
+                meet the exacting standards of hospital and clinical environments. We
+                supplied OEM-authorised LED lighting across the facility — products that
+                comply with the BIS certification requirements essential for government
+                institutional projects of this scale and specification.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
+                  OEM Authorised
+                </span>
+                <span class="pcard__chip">BIS Certified</span>
+                <span class="pcard__chip">Central Govt.</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- A2: Kaushal Bhawan -->
+          <li class="pcard reveal reveal--delay-1" id="kaushal-bhawan" aria-labelledby="kaushal-name">
+            <div class="pcard__bar pcard__bar--navy" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/kaushal-bhawan.jpg"
+                alt="Kaushal Bhawan — Ministry of Skill Development & Entrepreneurship, New Delhi"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--navy">Government · Ministry</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--navy">Ministry of Skill Development &amp; Entrepreneurship</p>
+              <h3 class="pcard__name" id="kaushal-name">Kaushal Bhawan (MSDE)</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                New Delhi
+              </p>
+              <p class="pcard__desc">
+                The flagship office of a Union Ministry demands lighting that is both
+                specification-compliant and architecturally considered. We supplied
+                authorised LED luminaires for this central government project, navigating
+                the procurement process, BIS compliance requirements, and the documentation
+                standards that government supply demands.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip">OEM Authorised</span>
+                <span class="pcard__chip">BIS Certified</span>
+                <span class="pcard__chip">Union Ministry</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- A3: Nau Sena Bhavan II -->
+          <li class="pcard reveal reveal--delay-2" id="nau-sena-bhavan" aria-labelledby="nsb-name">
+            <div class="pcard__bar pcard__bar--red" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/nau-sena-bhavan.jpg"
+                alt="Nau Sena Bhavan II — Indian Navy, Delhi Cantonment"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--red">Defence · Government</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--navy" style="color:#9B2020;">Indian Navy · Ministry of Defence</p>
+              <h3 class="pcard__name" id="nsb-name">Nau Sena Bhavan II</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Delhi Cantonment, New Delhi
+              </p>
+              <p class="pcard__desc">
+                A defence sector project requiring product quality, documentation
+                compliance, and supply reliability at a level that admits no compromise.
+                We supplied authorised LED luminaires for this Indian Navy establishment,
+                meeting the stringent procurement standards of the Ministry of Defence.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip">OEM Authorised</span>
+                <span class="pcard__chip">MoD Compliant</span>
+                <span class="pcard__chip">Defence</span>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         CATEGORY B — INFRASTRUCTURE & TRANSPORT
+    ───────────────────────────────────────────────────────────── -->
+    <section class="cat-section cat-section--warm" id="infrastructure-transport" aria-labelledby="cat-b-heading">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-header__accent cat-header__accent--orange" aria-hidden="true"></div>
+          <div class="cat-header__text">
+            <p class="cat-header__label cat-header__label--orange">Category B</p>
+            <h2 class="cat-header__title" id="cat-b-heading">Infrastructure &amp; Transport</h2>
+          </div>
+          <span class="cat-header__count" aria-hidden="true">4</span>
+        </div>
+
+        <ul class="project-grid project-grid--4" role="list">
+
+          <!-- B1: Signature Bridge -->
+          <li class="pcard reveal" id="signature-bridge" aria-labelledby="sb-name">
+            <div class="pcard__bar pcard__bar--orange" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/signature-bridge.jpg"
+                alt="Signature Bridge — Delhi's iconic cable-stayed bridge illuminated at night"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--orange">Infrastructure · Iconic</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--orange">Govt. of Delhi · PWD</p>
+              <h3 class="pcard__name" id="sb-name">Signature Bridge</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                New Delhi
+              </p>
+              <p class="pcard__desc">
+                Delhi's most iconic modern infrastructure project presented complex
+                outdoor and architectural lighting requirements — products capable of
+                performing through extreme weather conditions while delivering the
+                visual impact that a civic landmark demands. We supplied the LED
+                luminaires and structural lighting components that light one of India's
+                most recognisable bridges.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip pcard__chip--orange">Architectural LED</span>
+                <span class="pcard__chip pcard__chip--orange">Structural Lighting</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- B2: IGI Airport -->
+          <li class="pcard reveal reveal--delay-1" id="igi-airport" aria-labelledby="igi-name">
+            <div class="pcard__bar pcard__bar--orange" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/igi-airport.jpg"
+                alt="IGI Airport Multilevel Parking Complex, New Delhi"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--orange">Infrastructure · Airport</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--orange">Airports Authority of India</p>
+              <h3 class="pcard__name" id="igi-name">IGI Airport — Multilevel Parking</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Indira Gandhi International Airport, New Delhi
+              </p>
+              <p class="pcard__desc">
+                Airport infrastructure requires lighting that operates at intensity,
+                continuously, across vast structured parking volumes — all while meeting
+                the compliance and procurement standards of the Airports Authority of
+                India. We supplied OEM-authorised LED high-bays and luminaires for this
+                high-footfall critical infrastructure project.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip pcard__chip--orange">LED High-Bays</span>
+                <span class="pcard__chip pcard__chip--orange">AAI Compliant</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- B3: DMRC -->
+          <li class="pcard reveal reveal--delay-2" id="dmrc" aria-labelledby="dmrc-name">
+            <div class="pcard__bar pcard__bar--orange" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/dmrc-stations.jpg"
+                alt="DMRC Kashmere Gate and Red Fort Metro Stations, New Delhi"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--orange">Infrastructure · Metro Rail</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--orange">Delhi Metro Rail Corporation</p>
+              <h3 class="pcard__name" id="dmrc-name">DMRC — Kashmere Gate &amp; Red Fort</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Delhi Metro Rail Corporation
+              </p>
+              <p class="pcard__desc">
+                Delhi Metro stations operate around the clock, in high-density passenger
+                environments where lighting failure is not an option. We supplied
+                authorised LED luminaires for two of the network's key interchange
+                stations, meeting DMRC's stringent technical specifications and
+                procurement compliance requirements.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip pcard__chip--orange">24×7 Operation</span>
+                <span class="pcard__chip pcard__chip--orange">DMRC Spec</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- B4: NHAI Pune Solapur -->
+          <li class="pcard reveal reveal--delay-3" id="nhai-pune-solapur" aria-labelledby="nhai-name">
+            <div class="pcard__bar pcard__bar--orange" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/nhai-expressway.jpg"
+                alt="NHAI Pune Solapur Expressway — National Highways Authority of India"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--orange">Infrastructure · Highways</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--orange">National Highways Authority of India</p>
+              <h3 class="pcard__name" id="nhai-name">NHAI — Pune Solapur Expressway</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Pune, Maharashtra
+              </p>
+              <p class="pcard__desc">
+                A pan-India logistics demonstration: supply of high mast poles, street
+                lighting luminaires, and associated infrastructure components for a
+                national expressway project in Maharashtra — sourced from our Delhi
+                operations and coordinated with e-way bill facilitation and freight
+                management to site. Evidence of our ability to supply wherever India builds.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip pcard__chip--orange">High Mast Poles</span>
+                <span class="pcard__chip pcard__chip--orange">Pan-India Dispatch</span>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         CATEGORY C — DEFENCE HOSPITALITY & INSTITUTIONAL
+    ───────────────────────────────────────────────────────────── -->
+    <section class="cat-section" id="defence-hospitality" aria-labelledby="cat-c-heading">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-header__accent cat-header__accent--gold" aria-hidden="true"></div>
+          <div class="cat-header__text">
+            <p class="cat-header__label cat-header__label--gold">Category C</p>
+            <h2 class="cat-header__title" id="cat-c-heading">Defence, Hospitality &amp; Institutional</h2>
+          </div>
+          <span class="cat-header__count" aria-hidden="true">2</span>
+        </div>
+
+        <ul class="project-grid" role="list">
+
+          <!-- C1: Varuna Mess -->
+          <li class="pcard reveal" id="varuna-mess" aria-labelledby="varuna-name">
+            <div class="pcard__bar pcard__bar--gold" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/varuna-mess.jpg"
+                alt="Varuna Mess — Indian Navy establishment, New Delhi"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--gold">Defence · Hospitality</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--gold">Indian Navy</p>
+              <h3 class="pcard__name" id="varuna-name">Varuna Mess</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                New Delhi
+              </p>
+              <p class="pcard__desc">
+                A defence services hospitality facility requiring interior and exterior
+                lighting that meets both aesthetic and procurement compliance standards.
+                We supplied OEM-authorised LED luminaires for this Indian Navy mess
+                establishment — a project where product provenance, warranty integrity,
+                and documentation are as important as the luminaires themselves.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip pcard__chip--gold">OEM Authorised</span>
+                <span class="pcard__chip pcard__chip--gold">Defence Compliant</span>
+                <span class="pcard__chip pcard__chip--gold">Interior + Exterior</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- C2: ABHM Army Mess -->
+          <li class="pcard reveal reveal--delay-1" id="abhm-army-mess" aria-labelledby="abhm-name">
+            <div class="pcard__bar pcard__bar--gold" aria-hidden="true"></div>
+            <div class="pcard__img-wrap">
+              <img
+                src="../assets/images/projects/abhm-army-mess.jpg"
+                alt="ABHM Army Mess — Façade and Architectural Lighting, Chanakya Puri, New Delhi"
+                loading="lazy"
+                width="640" height="400"
+              />
+              <span class="pcard__tag pcard__tag--gold">Defence · Façade &amp; Architectural</span>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__client pcard__client--gold">Indian Army</p>
+              <h3 class="pcard__name" id="abhm-name">ABHM Army Mess — Façade &amp; Architectural Lighting</h3>
+              <p class="pcard__location">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Chanakya Puri, New Delhi
+              </p>
+              <p class="pcard__desc">
+                Façade and architectural lighting for a prestigious Army establishment
+                in New Delhi's diplomatic and institutional quarter. This project required
+                specialist knowledge of outdoor architectural LED product ranges — wall
+                grazers, floodlights, and profile luminaires — supplied from authorised
+                OEM stock with the full documentation required for defence procurement.
+              </p>
+              <div class="pcard__chips" aria-label="Project credentials">
+                <span class="pcard__chip pcard__chip--gold">Façade Lighting</span>
+                <span class="pcard__chip pcard__chip--gold">Wall Grazers</span>
+                <span class="pcard__chip pcard__chip--gold">Floodlights</span>
+              </div>
+            </div>
+          </li>
+
+          <!-- Placeholder — future project -->
+          <li class="pcard" aria-label="Future project placeholder"
+              style="border:2px dashed var(--navy-border);box-shadow:none;background:transparent;justify-content:center;align-items:center;min-height:320px;">
+            <div style="text-align:center;padding:var(--space-10) var(--space-8);display:flex;flex-direction:column;align-items:center;gap:var(--space-4);">
+              <svg viewBox="0 0 24 24" style="width:40px;height:40px;fill:var(--navy);opacity:0.18;" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+              </svg>
+              <p style="font-size:var(--text-sm);color:var(--text-light);font-style:italic;max-width:22ch;line-height:1.6;">
+                More projects being documented — check back soon.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         5. CTA BAND
+    ───────────────────────────────────────────────────────────── -->
+    <section class="cta-band" aria-labelledby="projects-cta-heading">
+      <div class="container">
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="cta-band__heading" id="projects-cta-heading">
+              Your project could be next.
+            </h2>
+            <p class="cta-band__sub">
+              Submit your BOQ or specification. Our project team responds within 24 hours.
+            </p>
+          </div>
+          <div class="cta-band__actions">
+            <a href="contact.html" class="btn btn--white btn--lg">
+              Submit Your Requirement
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="gem-govt.html" class="btn btn--ghost btn--lg">
+              GeM &amp; Govt. Supply
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__main">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="kumarshree.com — Home">
+            <div class="footer__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="footer__logo-name">kumarshree.com</div>
+              <div class="footer__logo-sub">LED Project Specialists</div>
+            </div>
+          </a>
+          <p class="footer__about">
+            Specialists in Project Supplies of LED Luminaries. Authorised distributors
+            for Bajaj, Philips, Havells, Crompton, Halonix &amp; Orient Electric —
+            serving India since 1985.
+          </p>
+          <div class="footer__badges">
+            <span class="footer__badge">GeM Seller</span>
+            <span class="footer__badge">BIS Certified</span>
+            <span class="footer__badge">OEM Authorised</span>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <nav aria-label="Footer quick links">
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__nav" role="list">
+            <li><a href="index.html"      class="footer__nav-link">Home</a></li>
+            <li><a href="about.html"      class="footer__nav-link">About Us</a></li>
+            <li><a href="products.html"   class="footer__nav-link">Products</a></li>
+            <li><a href="projects.html"   class="footer__nav-link">Projects</a></li>
+            <li><a href="services.html"   class="footer__nav-link">Services</a></li>
+            <li><a href="gem-govt.html"   class="footer__nav-link">GeM &amp; Govt Supply</a></li>
+            <li><a href="catalogues.html" class="footer__nav-link">Catalogues</a></li>
+            <li><a href="contact.html"    class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- MSKEPL -->
+        <div>
+          <h3 class="footer__col-title">M.S. Kumar Electricals Pvt. Ltd.</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>1311/8, Fasil Road, Behind PNB,<br>Asaf Ali Road, Ajmeri Gate,<br>New Delhi — 110006</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>T: <a href="tel:01143023232">011-43023232</a><br>M: <a href="tel:+919811078844">+91-9811078844</a></span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>
+                <a href="mailto:sandeep.kumarelec@gmail.com">sandeep.kumarelec@gmail.com</a><br>
+                <a href="mailto:electricalsmskumar@gmail.com">electricalsmskumar@gmail.com</a>
+              </span>
+            </div>
+          </address>
+          <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:var(--space-3);line-height:1.7;">
+            GST: 07AABCM0298G1ZJ<br>GeM Seller ID: 049D180000460368
+          </p>
+        </div>
+
+        <!-- KSE -->
+        <div>
+          <h3 class="footer__col-title">Kumar Shree Electricals</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Ground Floor, A-9, DDA Shed,<br>Okhla Industrial Area Phase-1,<br>New Delhi — 110020</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>
+                T: <a href="tel:01142448336">011-42448336</a><br>
+                M: <a href="tel:+919211771101">+91-9211771101</a> &middot; <a href="tel:+918527272652">+91-8527272652</a>
+              </span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span><a href="mailto:lighting@kumarshree.com">lighting@kumarshree.com</a></span>
+            </div>
+          </address>
+          <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:var(--space-3);">
+            GST: 07ABAFK4763B1ZM
+          </p>
+        </div>
+
+      </div><!-- /footer__main -->
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2025 kumarshree.com &middot; Specialists in Project Supplies of LED Luminaries &middot; All Rights Reserved
+        </p>
+        <nav class="footer__legal-links" aria-label="Legal links">
+          <a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="contact.html"        class="footer__legal-link">Contact Us</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- WHATSAPP FAB                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/919811078844"
+     class="whatsapp-fab"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    <span class="whatsapp-fab__label">WhatsApp Us</span>
+  </a>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <script src="../js/main.js" defer></script>
+  <script>
+    /* ── Mobile nav ──────────────────────────────────────────── */
+    var navToggle   = document.getElementById('nav-toggle');
+    var navMobile   = document.getElementById('nav-mobile');
+    var navBackdrop = document.getElementById('nav-backdrop');
+
+    function openNav() {
+      navMobile.classList.add('is-open');
+      navMobile.setAttribute('aria-hidden', 'false');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      navMobile.classList.remove('is-open');
+      navMobile.setAttribute('aria-hidden', 'true');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    navToggle.addEventListener('click', function () {
+      navMobile.classList.contains('is-open') ? closeNav() : openNav();
+    });
+    navBackdrop.addEventListener('click', closeNav);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMobile.classList.contains('is-open')) {
+        closeNav(); navToggle.focus();
+      }
+    });
+
+    /* ── Nav scroll shadow ───────────────────────────────────── */
+    var siteNav = document.getElementById('site-nav');
+    window.addEventListener('scroll', function () {
+      siteNav.classList.toggle('nav--scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── Scroll reveal ───────────────────────────────────────── */
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+  </script>
+
+</body>
+</html>

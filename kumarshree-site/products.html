@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9NYEWJSSW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S9NYEWJSSW');
+  </script>
+  
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Authorised OEM products for every project requirement — LED luminaires, lamps, fans, high mast poles and accessories from Bajaj, Philips, Havells, Crompton, Halonix & Orient Electric. BIS-certified. Fully warranted." />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title"       content="Products | kumarshree.com — Authorised OEM Lighting & Electrical Products" />
+  <meta property="og:description" content="6 product categories. 6 OEM brands. Every product supplied under formal authorisation — BIS-certified, fully warranted, documentation-ready." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.kumarshree.com/products.html" />
+
+  <title>Products | kumarshree.com — Authorised OEM Lighting & Electrical Products</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+  <style>
+    /* ── Page-specific styles ─────────────────────────────────── */
+
+    /* ── FILTER / JUMP NAV ────────────────────────────────────── */
+    .cat-filter-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--navy-border);
+      position: sticky;
+      top: var(--nav-height);
+      z-index: 500;
+      box-shadow: var(--shadow-xs);
+    }
+    .cat-filter-bar__inner {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      overflow-x: auto;
+      padding-block: var(--space-3);
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .cat-filter-bar__inner::-webkit-scrollbar { display: none; }
+
+    .cat-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: transparent;
+      border: 1.5px solid var(--navy-border);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast);
+    }
+    .cat-filter-btn:hover,
+    .cat-filter-btn.is-active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .cat-filter-btn__dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── INTRO BAND ───────────────────────────────────────────── */
+    .intro-band {
+      background: var(--bg-warm);
+      padding-block: clamp(var(--space-10), 6vw, var(--space-16));
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(27,58,107,0.018) 0, rgba(27,58,107,0.018) 1px,
+        transparent 0, transparent 40px
+      );
+      pointer-events: none;
+    }
+    .intro-band__inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+      align-items: center;
+    }
+    @media (min-width: 960px) {
+      .intro-band__inner {
+        grid-template-columns: 1fr 380px;
+        gap: var(--space-16);
+      }
+    }
+    .intro-band__body p {
+      font-size: var(--text-md);
+      color: var(--text-dark);
+      line-height: 1.82;
+    }
+    .intro-band__body p + p { margin-top: var(--space-5); }
+
+    /* OEM auth card */
+    .oem-auth-card {
+      background: var(--navy);
+      border-radius: var(--radius-lg);
+      padding: var(--space-7) var(--space-8);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-navy);
+    }
+    .oem-auth-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 70% at 110% 110%, rgba(212,115,26,0.20), transparent 55%),
+        repeating-linear-gradient(-45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 0, transparent 30px);
+      background-size: auto, 30px 30px;
+      pointer-events: none;
+    }
+    .oem-auth-card__inner { position: relative; z-index: 1; }
+    .oem-auth-card__label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.48);
+      margin-bottom: var(--space-4);
+    }
+    .oem-auth-card__heading {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: var(--space-5);
+      line-height: 1.25;
+    }
+    .oem-brand-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+    .oem-brand-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      transition: background var(--dur-fast), color var(--dur-fast);
+    }
+    .oem-brand-tag:hover {
+      background: rgba(212,115,26,0.22);
+      color: #FFD07A;
+    }
+    .oem-brand-tag--star::before { content: '★ '; color: #FFD07A; }
+    .oem-auth-card__note {
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.48);
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: var(--space-5);
+    }
+
+    /* ── PRODUCT CATEGORY SECTION ─────────────────────────────── */
+    .cat-section {
+      padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+      scroll-margin-top: calc(var(--nav-height) + 56px); /* sticky filter bar height */
+    }
+    .cat-section:nth-child(even) { background: var(--bg-warm); }
+    .cat-section:nth-child(odd)  { background: var(--bg); }
+
+    /* Category header row */
+    .cat-header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-5);
+      margin-bottom: var(--space-8);
+    }
+    .cat-num-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      flex-shrink: 0;
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .cat-intro {
+      flex: 1;
+    }
+    .cat-for-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-1) var(--space-3);
+      background: var(--orange-muted);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--orange-dark);
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-3);
+    }
+    .cat-title {
+      font-family: var(--font-heading);
+      font-size: clamp(var(--text-2xl), 3.5vw, var(--text-3xl));
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin-bottom: var(--space-4);
+    }
+    .cat-desc {
+      font-size: var(--text-md);
+      color: var(--text-muted);
+      line-height: 1.78;
+      max-width: 68ch;
+    }
+
+    /* Products within category — 3-col card grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    @media (min-width: 600px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-xs);
+      transition: transform var(--dur-base) var(--ease-out),
+                  box-shadow var(--dur-base) var(--ease-out),
+                  border-color var(--dur-base) var(--ease-out);
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(212,115,26,0.28);
+    }
+
+    /* Category colour accent bar at top */
+    .product-card__accent {
+      height: 4px;
+      width: 100%;
+      background: var(--navy);
+      transition: background var(--dur-base);
+    }
+    .product-card:hover .product-card__accent { background: var(--orange); }
+
+    /* Image placeholder */
+    .product-card__img {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg-warm);
+      position: relative;
+    }
+    .product-card__img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform var(--dur-slow) var(--ease-out);
+    }
+    .product-card:hover .product-card__img img { transform: scale(1.05); }
+
+    /* Placeholder when no image */
+    .product-card__img--ph {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: var(--space-3);
+      background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg) 100%);
+    }
+    .product-card__img--ph svg {
+      width: 40px; height: 40px;
+      fill: var(--navy);
+      opacity: 0.18;
+    }
+    .product-card__img--ph-label {
+      font-size: var(--text-xs);
+      color: var(--text-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .product-card__body {
+      padding: var(--space-5) var(--space-6) var(--space-6);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .product-card__name {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.22;
+      transition: color var(--dur-fast);
+    }
+    .product-card:hover .product-card__name { color: var(--orange); }
+    .product-card__desc {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.72;
+      flex: 1;
+    }
+    .product-card__enquire {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+      margin-top: var(--space-2);
+      transition: gap var(--dur-fast), color var(--dur-fast);
+    }
+    .product-card__enquire svg {
+      width: 13px; height: 13px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform var(--dur-fast);
+    }
+    .product-card:hover .product-card__enquire { gap: var(--space-3); }
+    .product-card:hover .product-card__enquire svg { transform: translateX(3px); }
+
+    /* Brand chips row at bottom of category */
+    .cat-brands-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-top: var(--space-8);
+      padding-top: var(--space-6);
+      border-top: 1px solid var(--navy-border);
+    }
+    .cat-brands-row__label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .cat-brand-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-1) var(--space-3);
+      background: var(--navy);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      transition: background var(--dur-fast);
+    }
+    .cat-brand-chip:hover { background: var(--navy-dark); }
+    .cat-brand-chip--star::before { content: '★ '; color: #FFD07A; }
+
+    /* ── BRAND SUMMARY TABLE ──────────────────────────────────── */
+    .brand-summary-section {
+      background: var(--navy-deeper);
+      padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-summary-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 100% at 85% 50%, rgba(212,115,26,0.12), transparent 55%),
+        repeating-linear-gradient(-45deg, rgba(255,255,255,0.013) 0, rgba(255,255,255,0.013) 1px, transparent 0, transparent 44px);
+      background-size: auto, 44px 44px;
+      pointer-events: none;
+    }
+    .brand-summary-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 640px)  { .brand-summary-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .brand-summary-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .brand-row {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-card);
+      padding: var(--space-6) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      transition: background var(--dur-base), border-color var(--dur-base);
+    }
+    .brand-row:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(212,115,26,0.35);
+    }
+    .brand-row__name {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .brand-row__name--star { color: #FFD07A; }
+    .brand-row__cats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    .brand-row__cat {
+      padding: 2px var(--space-3);
+      background: rgba(255,255,255,0.09);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: rgba(255,255,255,0.70);
+    }
+    .brand-row__note {
+      font-size: var(--text-xs);
+      color: rgba(255,255,255,0.42);
+      line-height: 1.5;
+    }
+
+    /* ── PRODUCT CATALOGUE + ENQUIRY CTAs ─────────────────────── */
+    .product-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+    @media (min-width: 640px) { .product-cta-grid { grid-template-columns: 1fr 1fr; } }
+
+    .product-cta-card {
+      background: var(--bg-card);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-card);
+      padding: var(--space-8) var(--space-7);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--dur-base), transform var(--dur-base);
+    }
+    .product-cta-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+    .product-cta-card--navy { border-top: 3px solid var(--navy); }
+    .product-cta-card--orange { border-top: 3px solid var(--orange); }
+
+    .product-cta-card__icon {
+      width: 52px; height: 52px;
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .product-cta-card--navy  .product-cta-card__icon { background: var(--navy-muted); }
+    .product-cta-card--orange .product-cta-card__icon { background: var(--orange-muted); }
+    .product-cta-card__icon svg {
+      width: 26px; height: 26px;
+    }
+    .product-cta-card--navy  .product-cta-card__icon svg { fill: var(--navy); }
+    .product-cta-card--orange .product-cta-card__icon svg { fill: var(--orange); }
+
+    .product-cta-card__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .product-cta-card__desc {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.72;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+
+          <a href="index.html" class="nav__logo" aria-label="kumarshree.com — Home">
+            <div class="nav__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+            </div>
+            <div class="nav__logo-text">
+              <span class="nav__logo-name">kumarshree.com</span>
+              <span class="nav__logo-tagline">LED Project Specialists &middot; Since 1985</span>
+            </div>
+          </a>
+
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"      class="nav__link">Home</a></li>
+            <li><a href="about.html"      class="nav__link">About</a></li>
+            <li><a href="products.html"   class="nav__link nav__link--active" aria-current="page">Products</a></li>
+            <li><a href="projects.html"   class="nav__link">Projects</a></li>
+            <li><a href="services.html"   class="nav__link">Services</a></li>
+            <li><a href="gem-govt.html"   class="nav__link">GeM &amp; Govt</a></li>
+            <li><a href="catalogues.html" class="nav__link">Catalogues</a></li>
+            <li><a href="contact.html"    class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <a href="https://wa.me/919811078844"
+               class="btn-whatsapp hide-mobile"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="WhatsApp Us">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+              WhatsApp Us
+            </a>
+            <button class="nav__hamburger" id="nav-toggle"
+                    aria-controls="nav-mobile" aria-expanded="false"
+                    aria-label="Open navigation menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
+      <div class="nav__mobile-backdrop" id="nav-backdrop"></div>
+      <nav class="nav__mobile-panel" aria-label="Mobile navigation">
+        <a href="index.html"      class="nav__mobile-link">Home</a>
+        <a href="about.html"      class="nav__mobile-link">About Us</a>
+        <a href="products.html"   class="nav__mobile-link nav__mobile-link--active" aria-current="page">Products</a>
+        <a href="projects.html"   class="nav__mobile-link">Projects</a>
+        <a href="services.html"   class="nav__mobile-link">Services</a>
+        <a href="gem-govt.html"   class="nav__mobile-link">GeM &amp; Govt Supply</a>
+        <a href="catalogues.html" class="nav__mobile-link">Catalogues</a>
+        <a href="contact.html"    class="nav__mobile-link">Contact</a>
+        <div class="nav__mobile-divider" role="separator"></div>
+        <a href="https://wa.me/919811078844"
+           class="btn-whatsapp nav__mobile-cta"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp Us">
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          WhatsApp Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MAIN                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─────────────────────────────────────────────────────────
+         PAGE HERO
+    ───────────────────────────────────────────────────────────── -->
+    <section class="page-hero" aria-label="Products page header">
+      <div class="container">
+        <div class="page-hero__inner">
+
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="breadcrumb__item">
+              <a href="index.html" class="breadcrumb__link">Home</a>
+              <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            </div>
+            <div class="breadcrumb__item">
+              <span class="breadcrumb__current" aria-current="page">Products</span>
+            </div>
+          </nav>
+
+          <span class="eyebrow" style="color:rgba(255,255,255,0.55);">OEM Authorised</span>
+          <h1 class="page-hero__heading">
+            Authorised OEM Products<br>for Every Project Requirement
+          </h1>
+          <p class="page-hero__sub">
+            LED luminaires, lamps, fans, high mast poles, and electrical accessories — supplied
+            from authorised OEM stock across six of India's most specified brands.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         STICKY CATEGORY FILTER BAR
+    ───────────────────────────────────────────────────────────── -->
+    <nav class="cat-filter-bar" aria-label="Jump to product category">
+      <div class="container">
+        <div class="cat-filter-bar__inner">
+          <a href="#cat-commercial"  class="cat-filter-btn" data-cat="cat-commercial">
+            <span class="cat-filter-btn__dot" style="background:#1B3A6B;" aria-hidden="true"></span>
+            Commercial &amp; Office
+          </a>
+          <a href="#cat-industrial"  class="cat-filter-btn" data-cat="cat-industrial">
+            <span class="cat-filter-btn__dot" style="background:#D4731A;" aria-hidden="true"></span>
+            Industrial
+          </a>
+          <a href="#cat-outdoor"     class="cat-filter-btn" data-cat="cat-outdoor">
+            <span class="cat-filter-btn__dot" style="background:#1B3A6B;" aria-hidden="true"></span>
+            Outdoor &amp; Architectural
+          </a>
+          <a href="#cat-smart"       class="cat-filter-btn" data-cat="cat-smart">
+            <span class="cat-filter-btn__dot" style="background:#D4731A;" aria-hidden="true"></span>
+            Smart &amp; Connected
+          </a>
+          <a href="#cat-consumer"    class="cat-filter-btn" data-cat="cat-consumer">
+            <span class="cat-filter-btn__dot" style="background:#1B3A6B;" aria-hidden="true"></span>
+            Consumer Products
+          </a>
+          <a href="#cat-poles"       class="cat-filter-btn" data-cat="cat-poles">
+            <span class="cat-filter-btn__dot" style="background:#D4731A;" aria-hidden="true"></span>
+            Poles &amp; High Mast
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         INTRO + OEM AUTH CARD
+    ───────────────────────────────────────────────────────────── -->
+    <div class="intro-band" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="intro-band__inner">
+
+          <div class="intro-band__body reveal">
+            <span class="eyebrow">Authorised. Warranted. Documented.</span>
+            <h2 class="section-heading" id="intro-heading">
+              If we list it, we are authorised to sell it
+            </h2>
+            <hr class="rule" />
+            <p>
+              Every product on this page is supplied under a formal OEM authorisation agreement —
+              carrying the full manufacturer warranty, BIS certification, and compliance
+              documentation required for government procurement, PSU purchase orders, and large
+              private projects. We do not supply catalogue equivalents or grey-market stock.
+            </p>
+            <p>
+              Our product range covers the complete requirement of a serious lighting project:
+              from commercial office panels and industrial high-bays to outdoor street lights,
+              architectural façade lighting, smart controllers, BLDC fans, and the high mast
+              poles and structures that carry them. One distributor. Six brands. Every category.
+            </p>
+          </div>
+
+          <div class="oem-auth-card reveal reveal--delay-1">
+            <div class="oem-auth-card__inner">
+              <p class="oem-auth-card__label">Authorised Distributor For</p>
+              <p class="oem-auth-card__heading">Six of India's most<br>specified electrical brands</p>
+              <div class="oem-brand-list" role="list" aria-label="Authorised OEM brands">
+                <span class="oem-brand-tag oem-brand-tag--star" role="listitem">Bajaj</span>
+                <span class="oem-brand-tag" role="listitem">Philips</span>
+                <span class="oem-brand-tag" role="listitem">Havells</span>
+                <span class="oem-brand-tag" role="listitem">Crompton</span>
+                <span class="oem-brand-tag" role="listitem">Halonix</span>
+                <span class="oem-brand-tag" role="listitem">Orient Electric</span>
+              </div>
+              <p class="oem-auth-card__note">
+                All products carry valid OEM authorisation certificates available on request
+                for tender submission and procurement records.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORY 1 — COMMERCIAL & OFFICE LIGHTING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cat-section" id="cat-commercial" aria-labelledby="cat1-title">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-num-badge reveal" style="background:var(--navy);" aria-hidden="true">1</div>
+          <div class="cat-intro">
+            <div class="cat-for-tag" aria-label="Suitable for">
+              Office buildings · Corporate campuses · Retail · Institutional interiors · Government offices
+            </div>
+            <h2 class="cat-title reveal" id="cat1-title">Commercial &amp; Office Lighting</h2>
+            <p class="cat-desc reveal">
+              The everyday workhorse of any commercial project — products that must perform at
+              scale, comply with specification, and arrive with the paperwork a project file
+              demands.
+            </p>
+          </div>
+        </div>
+
+        <ul class="product-grid" role="list">
+
+          <li class="product-card reveal">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/led-panel-2x2.jpg" alt="LED Panels 2x2" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm16 16V5H5v14h14z"/></svg>
+              <span class="product-card__img--ph-label">LED Panels</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">LED Panels (2×2)</h3>
+              <p class="product-card__desc">
+                Recessed and surface-mount panels for suspended ceiling grid applications.
+                Available across wattages and colour temperatures to suit office, institutional,
+                and retail environments.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about LED Panels">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/linear-batten.jpg" alt="Linear Battens and Profile Lighting" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M2 6h20v12H2V6zm2 2v8h16V8H4z"/></svg>
+              <span class="product-card__img--ph-label">Linear Battens</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Linear Battens &amp; Profile Lighting</h3>
+              <p class="product-card__desc">
+                Surface-mount and recessed linear luminaires for corridors, utility areas, and
+                open-plan offices. Robust, maintenance-friendly, and specification-compliant.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Linear Battens">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-2">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/downlighter.jpg" alt="Downlighters and Spotlights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7zm2 14h-4v-1h4v1zm0-3H10a5 5 0 1 1 4 0z"/></svg>
+              <span class="product-card__img--ph-label">Downlighters</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Downlighters &amp; Spotlights</h3>
+              <p class="product-card__desc">
+                Recessed LED downlights and adjustable spotlights for commercial interiors,
+                reception areas, and retail display applications.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Downlighters">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="cat-brands-row" aria-label="Brands available for this category">
+          <span class="cat-brands-row__label">Brands Available</span>
+          <span class="cat-brand-chip cat-brand-chip--star">Bajaj</span>
+          <span class="cat-brand-chip">Philips</span>
+          <span class="cat-brand-chip">Havells</span>
+          <span class="cat-brand-chip">Crompton</span>
+          <span class="cat-brand-chip">Halonix</span>
+          <span class="cat-brand-chip">Orient Electric</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORY 2 — INDUSTRIAL LIGHTING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cat-section" id="cat-industrial" aria-labelledby="cat2-title">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-num-badge reveal" style="background:var(--orange);" aria-hidden="true">2</div>
+          <div class="cat-intro">
+            <div class="cat-for-tag">
+              Factories · Warehouses · Logistics hubs · Workshops · Process plants · Government industrial facilities
+            </div>
+            <h2 class="cat-title reveal" id="cat2-title">Industrial Lighting</h2>
+            <p class="cat-desc reveal">
+              Industrial environments demand luminaires that can withstand heat, vibration, dust,
+              and continuous operation — while meeting the BIS compliance standards required for
+              factory and institutional procurement.
+            </p>
+          </div>
+        </div>
+
+        <ul class="product-grid" role="list">
+
+          <li class="product-card reveal">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/high-bay.jpg" alt="LED High-Bay Luminaires" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3V3zm0 16h18v2H3v-2zm2-14h14v12H5V5zm2 2v8h10V7H7z"/></svg>
+              <span class="product-card__img--ph-label">LED High-Bays</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">LED High-Bays</h3>
+              <p class="product-card__desc">
+                Wide-beam and narrow-beam high-bay luminaires for high-ceiling warehouses,
+                factories, and logistics facilities. Available in wattages from 50W to 250W+.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about LED High-Bays">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/wellglass.jpg" alt="Wellglass Luminaires" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c5.33 0 8 2.67 8 4v2H4v-2c0-1.33 2.67-4 8-4z"/></svg>
+              <span class="product-card__img--ph-label">Wellglass</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Wellglass Luminaires</h3>
+              <p class="product-card__desc">
+                Robust glass diffuser luminaires for industrial, utility, and outdoor covered
+                areas. Dust and moisture resistant. Suitable for harsh environments.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Wellglass Luminaires">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-2">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/flameproof.jpg" alt="Flameproof and Cleanroom Lighting" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
+              <span class="product-card__img--ph-label">Flameproof</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Flameproof &amp; Cleanroom Lighting</h3>
+              <p class="product-card__desc">
+                Specialist luminaires for hazardous area classification (ATEX/IS), pharmaceutical
+                cleanrooms, and food processing environments. Available to specification.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Flameproof Lighting">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="cat-brands-row" aria-label="Brands available for this category">
+          <span class="cat-brands-row__label">Brands Available</span>
+          <span class="cat-brand-chip cat-brand-chip--star">Bajaj</span>
+          <span class="cat-brand-chip">Philips</span>
+          <span class="cat-brand-chip">Havells</span>
+          <span class="cat-brand-chip">Crompton</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORY 3 — OUTDOOR & ARCHITECTURAL LIGHTING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cat-section" id="cat-outdoor" aria-labelledby="cat3-title">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-num-badge reveal" style="background:var(--navy);" aria-hidden="true">3</div>
+          <div class="cat-intro">
+            <div class="cat-for-tag">
+              Roads &amp; highways · Bridges · Campuses · Building façades · Parks · Government infrastructure
+            </div>
+            <h2 class="cat-title reveal" id="cat3-title">Outdoor &amp; Architectural Lighting</h2>
+            <p class="cat-desc reveal">
+              From NHAI expressways to iconic civic bridges — outdoor lighting must perform in
+              all weather conditions, meet photometric standards, and be specified correctly for
+              the application. We have supplied this category to some of India's most demanding
+              infrastructure projects.
+            </p>
+          </div>
+        </div>
+
+        <ul class="product-grid" role="list">
+
+          <li class="product-card reveal">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/street-light.jpg" alt="LED Street Lights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span class="product-card__img--ph-label">Street Lights</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">LED Street Lights</h3>
+              <p class="product-card__desc">
+                IDA-compliant LED street luminaires for roads, highways, campuses, and government
+                infrastructure. Available across mounting heights and wattages. BIS-certified for
+                tender compliance.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about LED Street Lights">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/floodlight.jpg" alt="LED Floodlights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+              <span class="product-card__img--ph-label">Floodlights</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Floodlights</h3>
+              <p class="product-card__desc">
+                High-output LED floodlights for façade washing, sports lighting, perimeter
+                security, and architectural illumination. Available from 50W to 500W+.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Floodlights">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-2">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/wall-grazer.jpg" alt="Wall Grazers and Washers" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+              <span class="product-card__img--ph-label">Wall Grazers</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Wall Grazers &amp; Washers</h3>
+              <p class="product-card__desc">
+                Architectural LED luminaires for façade grazing, wall washing, and building
+                feature lighting. Supplied for defence establishments and institutional
+                projects.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Wall Grazers">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="cat-brands-row" aria-label="Brands available for this category">
+          <span class="cat-brands-row__label">Brands Available</span>
+          <span class="cat-brand-chip cat-brand-chip--star">Bajaj</span>
+          <span class="cat-brand-chip">Philips</span>
+          <span class="cat-brand-chip">Havells</span>
+          <span class="cat-brand-chip">Crompton</span>
+          <span class="cat-brand-chip">Halonix</span>
+          <span class="cat-brand-chip">Orient Electric</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORY 4 — SMART & CONNECTED LIGHTING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cat-section" id="cat-smart" aria-labelledby="cat4-title">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-num-badge reveal" style="background:var(--orange);" aria-hidden="true">4</div>
+          <div class="cat-intro">
+            <div class="cat-for-tag">
+              Smart buildings · Government smart city projects · Campuses requiring centralised control
+            </div>
+            <h2 class="cat-title reveal" id="cat4-title">Smart &amp; Connected Lighting</h2>
+            <p class="cat-desc reveal">
+              As government and institutional projects increasingly specify smart lighting systems,
+              we supply the products that underpin them — from connected luminaires to street
+              light management systems.
+            </p>
+          </div>
+        </div>
+
+        <ul class="product-grid" role="list">
+
+          <li class="product-card reveal">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/smart-downlight.jpg" alt="Smart Bulbs and Downlights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7zm2 14h-4v-1h4v1zm0-3H10a5 5 0 1 1 4 0z"/></svg>
+              <span class="product-card__img--ph-label">Smart Downlights</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Smart Bulbs &amp; Downlights</h3>
+              <p class="product-card__desc">
+                Wi-Fi and Bluetooth-enabled LED products compatible with standard smart home
+                and building management platforms.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Smart Lighting">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/sensor-lighting.jpg" alt="Sensor Based Lighting" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+              <span class="product-card__img--ph-label">Sensor Lighting</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Sensor-Based Lighting</h3>
+              <p class="product-card__desc">
+                PIR motion-sensor luminaires, daylight-linked dimming systems, and
+                occupancy-responsive lighting for energy-efficient institutional and
+                commercial projects.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Sensor Lighting">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-2">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/smart-controller.jpg" alt="Smart Street Light Controllers" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+              <span class="product-card__img--ph-label">Street Light Controllers</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Smart Street Light Controllers</h3>
+              <p class="product-card__desc">
+                Centralised monitoring and control systems for large-scale outdoor LED street
+                lighting networks. Relevant for municipal and NHAI-category projects.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Street Light Controllers">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="cat-brands-row" aria-label="Brands available for this category">
+          <span class="cat-brands-row__label">Brands Available</span>
+          <span class="cat-brand-chip cat-brand-chip--star">Bajaj</span>
+          <span class="cat-brand-chip">Philips</span>
+          <span class="cat-brand-chip">Orient Electric</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORY 5 — CONSUMER PRODUCTS
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cat-section" id="cat-consumer" aria-labelledby="cat5-title">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-num-badge reveal" style="background:var(--navy);" aria-hidden="true">5</div>
+          <div class="cat-intro">
+            <div class="cat-for-tag">
+              Residential projects · Housing developments · Government quarters · Institutional accommodation
+            </div>
+            <h2 class="cat-title reveal" id="cat5-title">Consumer Products</h2>
+            <p class="cat-desc reveal">
+              Beyond project lighting, we carry the consumer product range from our authorised
+              brands — fans, domestic luminaires, and appliances for residential and
+              accommodation projects.
+            </p>
+          </div>
+        </div>
+
+        <ul class="product-grid" role="list">
+
+          <li class="product-card reveal">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/bldc-fan.jpg" alt="BLDC Ceiling Fans" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.93V18h-2v-1.07A8 8 0 0 1 4.07 11H6v-2H4.07A8 8 0 0 1 11 2.07V4h2V2.07A8 8 0 0 1 19.93 9H18v2h1.93A8 8 0 0 1 13 16.93zM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+              <span class="product-card__img--ph-label">BLDC Fans</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">BLDC Ceiling Fans</h3>
+              <p class="product-card__desc">
+                Brushless DC motor ceiling fans offering 50–60% energy saving over standard
+                fans. Available in standard and decorative finishes across multiple sweep sizes.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about BLDC Ceiling Fans">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/exhaust-fan.jpg" alt="Heavy Duty Exhaust Fans" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              <span class="product-card__img--ph-label">Exhaust Fans</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Heavy Duty Exhaust Fans</h3>
+              <p class="product-card__desc">
+                Industrial and heavy-duty exhaust fans for kitchens, utilities, workshops,
+                and ventilation applications.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Exhaust Fans">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-2">
+            <div class="product-card__accent" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/water-heater.jpg" alt="Storage Water Heaters" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M5 20v-8H3V9l3-7h12l3 7v3h-2v8H5zm8-8h4V9.5l-2-4.67L13 7.46V12zm-6 0h4V7.46L9 4.83 7 9.5V12zm-2 6h12v-4H5v4z"/></svg>
+              <span class="product-card__img--ph-label">Water Heaters</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Storage Water Heaters</h3>
+              <p class="product-card__desc">
+                Electric storage water heaters for residential and institutional accommodation
+                projects.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Storage Water Heaters">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="cat-brands-row" aria-label="Brands available for this category">
+          <span class="cat-brands-row__label">Brands Available</span>
+          <span class="cat-brand-chip cat-brand-chip--star">Bajaj</span>
+          <span class="cat-brand-chip">Orient Electric</span>
+          <span class="cat-brand-chip">Crompton</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CATEGORY 6 — POLES & HIGH MAST SYSTEMS
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cat-section" id="cat-poles" aria-labelledby="cat6-title">
+      <div class="container">
+
+        <div class="cat-header">
+          <div class="cat-num-badge reveal" style="background:var(--orange);" aria-hidden="true">6</div>
+          <div class="cat-intro">
+            <div class="cat-for-tag">
+              Highways · Expressways · Airport perimeters · Sports facilities · Industrial campuses · Government infrastructure
+            </div>
+            <h2 class="cat-title reveal" id="cat6-title">Poles &amp; High Mast Systems</h2>
+            <p class="cat-desc reveal">
+              High mast and street lighting poles are structural products that must meet IS
+              standards for galvanisation, wind load, and pole taper — as important to specify
+              correctly as the luminaires they carry.
+            </p>
+          </div>
+        </div>
+
+        <ul class="product-grid" role="list">
+
+          <li class="product-card reveal">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/octagonal-pole.jpg" alt="Octagonal Street Lighting Poles" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M11 2h2v20h-2V2z"/></svg>
+              <span class="product-card__img--ph-label">Octagonal Poles</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Octagonal Poles</h3>
+              <p class="product-card__desc">
+                Hot-dip galvanised octagonal steel poles for street lighting and outdoor
+                luminaire mounting. Available from 6m to 12m standard heights.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Octagonal Poles">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/high-mast.jpg" alt="High Mast Lighting Systems" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M11 2h2v15l4-4 1.41 1.41L12 20.83l-6.41-6.42L7 13l4 4V2z"/></svg>
+              <span class="product-card__img--ph-label">High Mast Systems</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">High Mast Systems</h3>
+              <p class="product-card__desc">
+                20m to 45m high mast lighting systems for highways, airports, port areas, and
+                large open spaces. Supplied as complete systems with luminaire rings and
+                lowering mechanisms.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about High Mast Systems">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-2">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/decorative-pole.jpg" alt="Decorative Street Lighting Poles" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M11 2h2v20h-2V2zm-4 4l4-3 4 3-4 3-4-3z"/></svg>
+              <span class="product-card__img--ph-label">Decorative Poles</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Decorative Poles</h3>
+              <p class="product-card__desc">
+                Ornamental and decorative street lighting poles for urban streetscape, campus,
+                and government beautification projects.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Decorative Poles">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="cat-brands-row" aria-label="Brands available for this category">
+          <span class="cat-brands-row__label">Brands Available</span>
+          <span class="cat-brand-chip cat-brand-chip--star">Bajaj</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         BRAND SUMMARY
+    ───────────────────────────────────────────────────────────── -->
+    <section class="brand-summary-section" aria-labelledby="brand-summary-heading">
+      <div class="container">
+
+        <div class="section-intro section-intro--center" style="position:relative;z-index:1;">
+          <span class="eyebrow" style="color:rgba(255,255,255,0.50);">OEM Coverage</span>
+          <h2 class="section-heading section-heading--light" id="brand-summary-heading">
+            Six brands. Every category.
+          </h2>
+          <hr class="rule" />
+          <p class="section-subheading section-subheading--light">
+            One distributor relationship across the full product range — with OEM authorisation
+            certificates available for any brand at any time.
+          </p>
+        </div>
+
+        <ul class="brand-summary-grid reveal" role="list">
+
+          <li class="brand-row" role="listitem">
+            <h3 class="brand-row__name brand-row__name--star">★ Bajaj</h3>
+            <div class="brand-row__cats" aria-label="Categories">
+              <span class="brand-row__cat">Commercial</span>
+              <span class="brand-row__cat">Industrial</span>
+              <span class="brand-row__cat">Outdoor</span>
+              <span class="brand-row__cat">Smart</span>
+              <span class="brand-row__cat">Consumer</span>
+              <span class="brand-row__cat">Poles</span>
+            </div>
+            <p class="brand-row__note">Top Distributor — North India. Widest range across all categories.</p>
+          </li>
+
+          <li class="brand-row" role="listitem">
+            <h3 class="brand-row__name">Philips</h3>
+            <div class="brand-row__cats" aria-label="Categories">
+              <span class="brand-row__cat">Commercial</span>
+              <span class="brand-row__cat">Industrial</span>
+              <span class="brand-row__cat">Outdoor</span>
+              <span class="brand-row__cat">Smart</span>
+            </div>
+            <p class="brand-row__note">BIS-certified for government and PSU supply.</p>
+          </li>
+
+          <li class="brand-row" role="listitem">
+            <h3 class="brand-row__name">Havells</h3>
+            <div class="brand-row__cats" aria-label="Categories">
+              <span class="brand-row__cat">Commercial</span>
+              <span class="brand-row__cat">Industrial</span>
+              <span class="brand-row__cat">Outdoor</span>
+            </div>
+            <p class="brand-row__note">Professional lighting range, switchgear, and accessories.</p>
+          </li>
+
+          <li class="brand-row" role="listitem">
+            <h3 class="brand-row__name">Crompton</h3>
+            <div class="brand-row__cats" aria-label="Categories">
+              <span class="brand-row__cat">Commercial</span>
+              <span class="brand-row__cat">Industrial</span>
+              <span class="brand-row__cat">Outdoor</span>
+              <span class="brand-row__cat">Consumer</span>
+            </div>
+            <p class="brand-row__note">Professional and consumer LED, industrial applications.</p>
+          </li>
+
+          <li class="brand-row" role="listitem">
+            <h3 class="brand-row__name">Halonix</h3>
+            <div class="brand-row__cats" aria-label="Categories">
+              <span class="brand-row__cat">Commercial</span>
+              <span class="brand-row__cat">Outdoor</span>
+              <span class="brand-row__cat">Consumer</span>
+            </div>
+            <p class="brand-row__note">LED lamps, luminaires, and lighting solutions.</p>
+          </li>
+
+          <li class="brand-row" role="listitem">
+            <h3 class="brand-row__name">Orient Electric</h3>
+            <div class="brand-row__cats" aria-label="Categories">
+              <span class="brand-row__cat">Commercial</span>
+              <span class="brand-row__cat">Outdoor</span>
+              <span class="brand-row__cat">Smart</span>
+              <span class="brand-row__cat">Consumer</span>
+            </div>
+            <p class="brand-row__note">Lighting, fans, and associated product range.</p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         CATALOGUES + ENQUIRY CTAs
+    ───────────────────────────────────────────────────────────── -->
+    <section class="section" style="background:var(--bg-warm);" aria-labelledby="product-cta-heading">
+      <div class="container">
+
+        <div class="section-intro section-intro--center">
+          <span class="eyebrow">Next Steps</span>
+          <h2 class="section-heading" id="product-cta-heading">
+            Price lists and project pricing
+          </h2>
+          <hr class="rule" />
+        </div>
+
+        <div class="product-cta-grid">
+
+          <div class="product-cta-card product-cta-card--navy reveal">
+            <div class="product-cta-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 20h14v-2H5v2zm7-18v10.17l-3.59-3.58L7 10l5 5 5-5-1.41-1.41L13 12.17V2h-1z"/>
+              </svg>
+            </div>
+            <h3 class="product-cta-card__title">Download Product Catalogues</h3>
+            <p class="product-cta-card__desc">
+              Price lists are available for all categories. Download the latest OEM price lists
+              from our Catalogues page — available free after a one-time registration.
+            </p>
+            <a href="catalogues.html" class="btn btn--secondary btn--lg" style="align-self:flex-start;">
+              View Catalogues
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="product-cta-card product-cta-card--orange reveal reveal--delay-1">
+            <div class="product-cta-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <h3 class="product-cta-card__title">Have a BOQ or Tender Specification?</h3>
+            <p class="product-cta-card__desc">
+              Submit your requirement and our project team will confirm the authorised OEM
+              product, wattage, and specification compliance — with pricing — within 24 hours.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);align-self:flex-start;">
+              <a href="contact.html" class="btn btn--primary">
+                Submit Requirement
+              </a>
+              <a href="https://wa.me/919811078844" target="_blank" rel="noopener noreferrer"
+                 class="btn btn--outline" style="border-color:var(--orange);color:var(--orange);"
+                 onmouseover="this.style.background='var(--orange)';this.style.color='white';"
+                 onmouseout="this.style.background='transparent';this.style.color='var(--orange)';">
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────────
+         CTA BAND
+    ───────────────────────────────────────────────────────────── -->
+    <section class="cta-band" aria-labelledby="products-cta-heading">
+      <div class="container">
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="cta-band__heading" id="products-cta-heading">
+              Need a product we haven't listed?
+            </h2>
+            <p class="cta-band__sub">
+              We carry the complete OEM range for all six authorised brands. If it's made by
+              Bajaj, Philips, Havells, Crompton, Halonix, or Orient Electric, we can supply it.
+            </p>
+          </div>
+          <div class="cta-band__actions">
+            <a href="contact.html" class="btn btn--white btn--lg">
+              Contact Our Team
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="gem-govt.html" class="btn btn--ghost btn--lg">GeM &amp; Govt. Supply</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__main">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="kumarshree.com — Home">
+            <div class="footer__logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="footer__logo-name">kumarshree.com</div>
+              <div class="footer__logo-sub">LED Project Specialists</div>
+            </div>
+          </a>
+          <p class="footer__about">Specialists in Project Supplies of LED Luminaries. Authorised distributors for Bajaj, Philips, Havells, Crompton, Halonix &amp; Orient Electric — serving India since 1985.</p>
+          <div class="footer__badges">
+            <span class="footer__badge">GeM Seller</span>
+            <span class="footer__badge">BIS Certified</span>
+            <span class="footer__badge">OEM Authorised</span>
+          </div>
+        </div>
+
+        <nav aria-label="Footer quick links">
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__nav" role="list">
+            <li><a href="index.html"      class="footer__nav-link">Home</a></li>
+            <li><a href="about.html"      class="footer__nav-link">About Us</a></li>
+            <li><a href="products.html"   class="footer__nav-link">Products</a></li>
+            <li><a href="projects.html"   class="footer__nav-link">Projects</a></li>
+            <li><a href="services.html"   class="footer__nav-link">Services</a></li>
+            <li><a href="gem-govt.html"   class="footer__nav-link">GeM &amp; Govt Supply</a></li>
+            <li><a href="catalogues.html" class="footer__nav-link">Catalogues</a></li>
+            <li><a href="contact.html"    class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="footer__col-title">M.S. Kumar Electricals Pvt. Ltd.</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>1311/8, Fasil Road, Behind PNB,<br>Asaf Ali Road, Ajmeri Gate,<br>New Delhi — 110006</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>T: <a href="tel:01143023232">011-43023232</a> · M: <a href="tel:+919811078844">+91-9811078844</a></span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>
+                <a href="mailto:sandeep.kumarelec@gmail.com">sandeep.kumarelec@gmail.com</a><br>
+                <a href="mailto:electricalsmskumar@gmail.com">electricalsmskumar@gmail.com</a>
+              </span>
+            </div>
+          </address>
+          <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:var(--space-3);line-height:1.7;">GST: 07AABCM0298G1ZJ · GeM Seller ID: 049D180000460368</p>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Kumar Shree Electricals</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Ground Floor, A-9, DDA Shed,<br>Okhla Industrial Area Phase-1,<br>New Delhi — 110020</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>
+                T: <a href="tel:01142448336">011-42448336</a><br>
+                M: <a href="tel:+919211771101">+91-9211771101</a> · <a href="tel:+918527272652">+91-8527272652</a>
+              </span>
+            </div>
+            <div class="footer__contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span><a href="mailto:lighting@kumarshree.com">lighting@kumarshree.com</a></span>
+            </div>
+          </address>
+          <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:var(--space-3);">GST: 07ABAFK4763B1ZM</p>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 kumarshree.com · Specialists in Project Supplies of LED Luminaries · All Rights Reserved</p>
+        <nav class="footer__legal-links" aria-label="Legal links">
+          <a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="contact.html"        class="footer__legal-link">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- WHATSAPP FAB                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/919811078844"
+     class="whatsapp-fab"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.526 5.854L.06 23.077a.75.75 0 0 0 .932.932l5.223-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.715 9.715 0 0 1-4.956-1.354l-.357-.21-3.699 1.038 1.039-3.698-.21-.357A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    <span class="whatsapp-fab__label">WhatsApp Us</span>
+  </a>
+
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <script src="../js/main.js" defer></script>
+  <script>
+    /* ── Mobile nav ──────────────────────────────────────────── */
+    var navToggle   = document.getElementById('nav-toggle');
+    var navMobile   = document.getElementById('nav-mobile');
+    var navBackdrop = document.getElementById('nav-backdrop');
+    function openNav() {
+      navMobile.classList.add('is-open');
+      navMobile.setAttribute('aria-hidden', 'false');
+      navToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      navMobile.classList.remove('is-open');
+      navMobile.setAttribute('aria-hidden', 'true');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    navToggle.addEventListener('click', function () {
+      navMobile.classList.contains('is-open') ? closeNav() : openNav();
+    });
+    navBackdrop.addEventListener('click', closeNav);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMobile.classList.contains('is-open')) {
+        closeNav(); navToggle.focus();
+      }
+    });
+
+    /* ── Nav scroll shadow ───────────────────────────────────── */
+    var siteNav = document.getElementById('site-nav');
+    window.addEventListener('scroll', function () {
+      siteNav.classList.toggle('nav--scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── Scroll reveal ───────────────────────────────────────── */
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+
+    /* ── Active filter button on scroll ─────────────────────── */
+    (function () {
+      var cats     = document.querySelectorAll('.cat-section[id]');
+      var btns     = document.querySelectorAll('.cat-filter-btn[data-cat]');
+      var navH     = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '72', 10);
+      var filterH  = 52; /* approx filter bar height */
+      var offset   = navH + filterH + 20;
+
+      if (!cats.length || !btns.length) return;
+
+      function getActiveCat() {
+        var scrollY = window.scrollY + offset;
+        var active  = null;
+        cats.forEach(function (sec) {
+          if (sec.offsetTop <= scrollY) active = sec.id;
+        });
+        return active;
+      }
+
+      function updateFilter() {
+        var activeId = getActiveCat();
+        btns.forEach(function (btn) {
+          btn.classList.toggle('is-active', btn.getAttribute('data-cat') === activeId);
+        });
+      }
+
+      window.addEventListener('scroll', updateFilter, { passive: true });
+      updateFilter();
+    }());
+  </script>
+
+</body>
+</html>
