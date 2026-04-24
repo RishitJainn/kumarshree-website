@@ -1,6 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9NYEWJSSW"></script>
   <script>
@@ -14,7 +18,6 @@
 
 
   <meta charset="UTF-8" />
-  <link rel="icon" href="images/favicon.png" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Authorised OEM products for every project requirement — LED luminaires, lamps, fans, high mast poles and accessories from Bajaj, Philips, Havells, Crompton, Halonix & Orient Electric. BIS-certified. Fully warranted." />
   <meta name="robots" content="index, follow" />
@@ -29,6 +32,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
   <style>
     /* ── Page-specific styles ─────────────────────────────────── */
 
@@ -539,7 +544,7 @@
 
           <a href="index.html" class="nav__logo" aria-label="M S Kumar Electricals — Home">
             <div class="nav__logo-mark" aria-hidden="true">
-              <img src="images/40 Years of MSKEPL.png" alt="" />
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
             </div>
             <div class="nav__logo-text">
               <span class="nav__logo-name">M S Kumar Electricals</span>
@@ -705,7 +710,7 @@
               <p class="oem-auth-card__label">Authorised Distributor For</p>
               <p class="oem-auth-card__heading">Six of India's most<br>specified electrical brands</p>
               <div class="oem-brand-list" role="list" aria-label="Authorised OEM brands">
-                <span class="oem-brand-tag" role="listitem">Bajaj Electricals</span>
+                <span class="oem-brand-tag oem-brand-tag--star" role="listitem">Bajaj</span>
                 <span class="oem-brand-tag" role="listitem">Philips</span>
                 <span class="oem-brand-tag" role="listitem">Havells</span>
                 <span class="oem-brand-tag" role="listitem">Crompton</span>
@@ -750,8 +755,10 @@
 
           <li class="product-card reveal">
             <div class="product-card__accent" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/2x2 panel.webp" alt="LED Panels 2&times;2" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/led-panel-2x2.jpg" alt="LED Panels 2x2" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm16 16V5H5v14h14z"/></svg>
+              <span class="product-card__img--ph-label">LED Panels</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">LED Panels (2×2)</h3>
@@ -769,8 +776,10 @@
 
           <li class="product-card reveal reveal--delay-1">
             <div class="product-card__accent" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/Linear batten.jpg" alt="Linear Battens &amp; Profile Lighting" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/linear-batten.jpg" alt="Linear Battens and Profile Lighting" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M2 6h20v12H2V6zm2 2v8h16V8H4z"/></svg>
+              <span class="product-card__img--ph-label">Linear Battens</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Linear Battens &amp; Profile Lighting</h3>
@@ -787,8 +796,10 @@
 
           <li class="product-card reveal reveal--delay-2">
             <div class="product-card__accent" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/downlights.jpg" alt="Downlighters &amp; Spotlights" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/downlighter.jpg" alt="Downlighters and Spotlights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7zm2 14h-4v-1h4v1zm0-3H10a5 5 0 1 1 4 0z"/></svg>
+              <span class="product-card__img--ph-label">Downlighters</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Downlighters &amp; Spotlights</h3>
@@ -845,8 +856,30 @@
 
           <li class="product-card reveal">
             <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/LED well glass.jpg" alt="Wellglass Luminaires" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/high-bay.jpg" alt="LED High-Bay Luminaires" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M3 3h18v2H3V3zm0 16h18v2H3v-2zm2-14h14v12H5V5zm2 2v8h10V7H7z"/></svg>
+              <span class="product-card__img--ph-label">LED High-Bays</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">LED High-Bays</h3>
+              <p class="product-card__desc">
+                Wide-beam and narrow-beam high-bay luminaires for high-ceiling warehouses,
+                factories, and logistics facilities. Available in wattages from 50W to 250W+.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about LED High-Bays">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/wellglass.jpg" alt="Wellglass Luminaires" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2zm0 12c5.33 0 8 2.67 8 4v2H4v-2c0-1.33 2.67-4 8-4z"/></svg>
+              <span class="product-card__img--ph-label">Wellglass</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Wellglass Luminaires</h3>
@@ -863,8 +896,10 @@
 
           <li class="product-card reveal reveal--delay-2">
             <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/flameproof.webp" alt="Flameproof &amp; Cleanroom Lighting" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/flameproof.jpg" alt="Flameproof and Cleanroom Lighting" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
+              <span class="product-card__img--ph-label">Flameproof</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Flameproof &amp; Cleanroom Lighting</h3>
@@ -920,8 +955,10 @@
 
           <li class="product-card reveal">
             <div class="product-card__accent" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/LED Street Light.webp" alt="LED Street Lights" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/street-light.jpg" alt="LED Street Lights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span class="product-card__img--ph-label">Street Lights</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">LED Street Lights</h3>
@@ -939,8 +976,10 @@
 
           <li class="product-card reveal reveal--delay-1">
             <div class="product-card__accent" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/LED Floodlight.jpg" alt="LED Floodlights" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/floodlight.jpg" alt="LED Floodlights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
+              <span class="product-card__img--ph-label">Floodlights</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Floodlights</h3>
@@ -957,8 +996,10 @@
 
           <li class="product-card reveal reveal--delay-2">
             <div class="product-card__accent" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/wall grazer.jpeg" alt="Wall Grazers &amp; Washers" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/wall-grazer.jpg" alt="Wall Grazers and Washers" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+              <span class="product-card__img--ph-label">Wall Grazers</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Wall Grazers &amp; Washers</h3>
@@ -1016,8 +1057,30 @@
 
           <li class="product-card reveal">
             <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/Sensor lighting.webp" alt="Sensor Based Lighting" loading="lazy" width="480" height="270" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/smart-downlight.jpg" alt="Smart Bulbs and Downlights" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7zm2 14h-4v-1h4v1zm0-3H10a5 5 0 1 1 4 0z"/></svg>
+              <span class="product-card__img--ph-label">Smart Downlights</span>
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__name">Smart Bulbs &amp; Downlights</h3>
+              <p class="product-card__desc">
+                Wi-Fi and Bluetooth-enabled LED products compatible with standard smart home
+                and building management platforms.
+              </p>
+              <a href="contact.html" class="product-card__enquire" aria-label="Enquire about Smart Lighting">
+                Enquire for Pricing
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </li>
+
+          <li class="product-card reveal reveal--delay-1">
+            <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/sensor-lighting.jpg" alt="Sensor Based Lighting" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+              <span class="product-card__img--ph-label">Sensor Lighting</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Sensor-Based Lighting</h3>
@@ -1035,8 +1098,10 @@
 
           <li class="product-card reveal reveal--delay-2">
             <div class="product-card__accent" style="background:var(--orange);" aria-hidden="true"></div>
-            <div class="product-card__img" aria-hidden="true">
-              <img src="images/Products/street light controllers.jpg" alt="Smart Street Light Controllers" loading="lazy" width="480" height="270" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <div class="product-card__img product-card__img--ph" aria-hidden="true">
+              <!-- Replace with: <img src="../assets/images/products/smart-controller.jpg" alt="Smart Street Light Controllers" loading="lazy" width="480" height="270" /> -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+              <span class="product-card__img--ph-label">Street Light Controllers</span>
             </div>
             <div class="product-card__body">
               <h3 class="product-card__name">Smart Street Light Controllers</h3>
@@ -1451,7 +1516,7 @@
         <div class="footer__brand">
           <a href="index.html" class="footer__logo" aria-label="M S Kumar Electricals — Home">
             <div class="footer__logo-mark" aria-hidden="true">
-              <img src="images/40 Years of MSKEPL.png" alt="" />
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2L3 13h7l-1 9 9-12h-7l1-8z"/></svg>
             </div>
             <div>
               <div class="footer__logo-name">M S Kumar Electricals</div>
@@ -1461,7 +1526,7 @@
           <p class="footer__about">Specialists in Project Supplies of LED Luminaries. Authorised distributors for Bajaj, Philips, Havells, Crompton, Halonix &amp; Orient Electric — serving India since 1985.</p>
           <div class="footer__badges">
             <span class="footer__badge">GeM Seller</span>
-            <span class="footer__badge">BIS Certified Products</span>
+            <span class="footer__badge">BIS Certified</span>
             <span class="footer__badge">OEM Authorised</span>
           </div>
         </div>
