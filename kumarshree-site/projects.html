@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -38,6 +38,13 @@
       margin-bottom: var(--space-8);
       padding-bottom: var(--space-5);
       border-bottom: 2px solid var(--navy-border);
+      flex-wrap: wrap;
+    }
+    /* Hide decorative count on mobile to avoid overflow */
+    @media (max-width: 639px) {
+      .cat-header__count { display: none; }
+      .pcard__chips { gap: var(--space-1); }
+      .pcard__chip { font-size: 0.65rem; padding: 3px 8px; }
     }
     .cat-header__accent {
       width: 5px;
@@ -266,23 +273,26 @@
     }
     .portfolio-summary__grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-4);
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
       position: relative;
     }
-    @media (min-width: 768px) {
-      .portfolio-summary__grid { grid-template-columns: repeat(3, 1fr); }
+    @media (min-width: 480px) {
+      .portfolio-summary__grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
     }
     .psumm-item {
       text-align: center;
-      padding: var(--space-5) var(--space-4);
+      padding: var(--space-4) var(--space-3);
       border-radius: var(--radius-card);
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
     }
+    @media (min-width: 480px) {
+      .psumm-item { padding: var(--space-5) var(--space-4); }
+    }
     .psumm-item__num {
       font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(1.6rem, 5vw, 3rem);
       font-weight: 900;
       color: var(--white);
       line-height: 1;
@@ -296,6 +306,7 @@
       letter-spacing: 0.06em;
       margin-top: var(--space-2);
       text-transform: uppercase;
+      line-height: 1.4;
     }
 
     /* Image placeholder graphic */
@@ -340,7 +351,7 @@
               <img src="images/40 Years of MSKEPL.png" alt="" />
             </div>
             <div class="nav__logo-text">
-              <span class="nav__logo-name">M S Kumar Electricals</span>
+              <span class="nav__logo-name">M S Kumar Electricals Pvt Ltd</span>
               <span class="nav__logo-tagline">LED Project Specialists &middot; Since 1985</span>
             </div>
           </a>
@@ -447,13 +458,13 @@
         <dl class="portfolio-summary__grid">
           <div class="psumm-item reveal">
             <dt class="sr-only">Total Projects</dt>
-            <dd class="psumm-item__num">50<span>+</span></dd>
+            <dd class="psumm-item__num">100<span>+</span></dd>
             <span class="psumm-item__label">Projects Completed</span>
           </div>
           <div class="psumm-item reveal reveal--delay-1">
             <dt class="sr-only">Categories</dt>
-            <dd class="psumm-item__num">3</dd>
-            <span class="psumm-item__label">Project Categories</span>
+            <dd class="psumm-item__num">5<span>+</span></dd>
+            <span class="psumm-item__label">Project Categories<br><small style="font-size:0.6em;font-weight:400;letter-spacing:0.03em;opacity:0.7;">Residential · Commercial · Industrial &amp; more</small></span>
           </div>
           <div class="psumm-item reveal reveal--delay-2">
             <dt class="sr-only">Supply Reach</dt>
@@ -921,13 +932,13 @@
               <img src="images/40 Years of MSKEPL.png" alt="" />
             </div>
             <div>
-              <div class="footer__logo-name">M S Kumar Electricals</div>
+              <div class="footer__logo-name">M S Kumar Electricals Pvt Ltd</div>
               <div class="footer__logo-sub">LED Project Specialists</div>
             </div>
           </a>
           <p class="footer__about">
             Specialists in Project Supplies of LED Luminaries. Authorised distributors
-            for Bajaj, Philips, Havells, Crompton, Halonix &amp; Orient Electric —
+            for Bajaj, Philips, Havells, Crompton, Halonix &amp; Orient —
             serving India since 1985.
           </p>
           <div class="footer__badges">
